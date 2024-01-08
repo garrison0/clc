@@ -2,6 +2,9 @@
 import "@styles/reset.css";
 import "@styles/global.css";
 import "@styles/variables.css";
+import { Image } from "astro:assets";
+import Footer from '@components/Footer.astro';
+import logo from "@images/logo.png";
 
 export interface Props {
   title: string;
@@ -52,6 +55,37 @@ const socialImageURL = new URL("/seo.png", Astro.url);
     <meta name="twitter:image:alt" content={title} />
   </head>
   <body>
+    <nav>
+      <a href="#">
+        <Image
+          alt="Astronaut logo"
+          class="dark"
+          src={logo}
+          height={logo.height}
+          width={logo.width}
+          style={{margin: "12px"}}
+          loading="eager"
+        />
+      </a>
+      <ul>
+        <li><a href="#first">About us</a></li>
+        <li><a href="#second">Ministries</a></li>
+        <li><a href="#third">Calendar</a></li>
+        <li><a href="#third">Contact us</a></li>
+        <li><a href="#third">Give</a></li>
+      </ul>
+    </nav>
     <slot />
   </body>
+  <Footer />
 </html>
+
+<style>
+  nav { 
+    padding: 0 4rem;
+  }
+
+  /* footer { 
+    color: var(--color-background); 
+  } */
+</style>

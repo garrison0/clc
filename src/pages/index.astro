@@ -1,16 +1,218 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import SkipLink from "@utils/SkipLink.astro";
-import DeleteMe from "@components/DeleteMe.astro";
+import ExternalLink from "@utils/ExternalLink.astro";
 import BackToTop from "@utils/BackToTop.astro";
 ---
 
 <Layout title="Astronaut - Astro starter template">
   <SkipLink />
   <div class="sr-only" id="start"></div>
-  <DeleteMe />
-  <section aria-label="Utilities">
+  
+
+  <div class="wrapper">
+  
+    <main id="main">
+      <!-- CLC intro section component -->
+      <div class="overlay"></div>
+      <section id="introduction" aria-label="Christ Church introduction">
+        <div class="overlay-text">
+          <h1>Christ Church Woodside</h1>
+          <p>
+            Celebrating God's Gospel to the world throughout the world's borough.
+          </p>
+          <p>
+            A congregation of the <ExternalLink
+              href="https://www.lcms.org/"
+              name="Lutheran Church—Missouri Synod."
+            />
+          </p>
+        </div>
+      </section>
+      <section aria-label="Service time">
+        <h3>Service times</h3>
+        Livestream video here!
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </section>
+      <section aria-label="Announcements">
+        <h3>Announcements</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </section>
+    </main>
+  </div>
+
+  <!--  -->
+  <div aria-label="Utilities">
     <!-- You could also add a theme switch here or anything considered a utility -->
     <BackToTop />
-  </section>
+  </div>
 </Layout>
+
+<style>
+  .wrapper {
+    margin: 0 auto;
+    max-width: 868px;
+    padding: 0 var(--space-s);
+  }
+
+  img {
+    height: auto;
+    margin: var(--space-l) 0;
+  }
+
+  section:not(#introduction) {
+    background-color: var(--color-background);
+    z-index: 100;
+    position: relative;
+    padding: 2rem 2.75rem;
+  }
+
+  section:not(#introduction):not(:last-child) {
+    padding-bottom: 0;
+  }
+
+  .button-wrapper {
+    margin: var(--space-xl) 0;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(33,27,23,.59);
+    z-index: 99;
+  }
+
+  #main { 
+    position: relative;
+  }
+
+  #introduction { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: url("../images/clc.jpeg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    margin: 0;
+    min-height: 35rem;
+  }
+
+  .overlay-text { 
+    padding: 0 25px;
+    z-index: 100;
+  }
+
+  #template-button {
+    align-items: center;
+    background: var(--color-green);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 30px 0px var(--color-green);
+    color: var(--color-white);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--step-2);
+    gap: var(--space-xs);
+    margin: 0 auto;
+    padding: var(--space-2xs) var(--space-xs);
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  #template-button:focus,
+  #template-button:hover {
+    box-shadow: none;
+  }
+
+  #template-button img {
+    margin: 0;
+  }
+
+  #template-text {
+    font-size: var(--step-0);
+    margin: var(--space-2xs) auto 0 auto;
+    width: fit-content;
+  }
+
+  #template-text a {
+    font-size: var(--step-0);
+  }
+
+  #template-text a::after {
+    content: " ↪";
+  }
+
+  h2 {
+    margin-bottom: var(--space-xs);
+  }
+
+  h1 { 
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: var(--space-s);
+  }
+
+  pre {
+    background: var(--color-grey-dark);
+    border: 1px solid var(--color-grey-light);
+    border-radius: var(--border-radius);
+    font-size: var(--step-0);
+    color: var(--color-yellow);
+    overflow: auto;
+    padding: var(--space-s);
+    white-space: nowrap;
+  }
+
+  code {
+    word-break: break-all;
+  }
+
+  .code-block {
+    color: var(--color-yellow) !important;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .smol {
+    font-size: var(--step-0);
+  }
+
+  footer {
+    border-top: 1px solid var(--color-grey-dark);
+    text-align: center;
+    margin-top: var(--space-3xl);
+    padding: var(--space-l) 0;
+  }
+
+  footer p {
+    font-size: var(--step-0);
+  }
+
+  @media (prefers-contrast: more) {
+    #template-button {
+      background: darkgreen;
+      box-shadow: 0px 0px 30px 0px darkgreen;
+      color: #fff;
+    }
+  }
+</style>

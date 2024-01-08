@@ -1,5 +1,18 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
+
+  /* for text, far background */
+  --color-eggshell: #f5f6eb; 
+  --color-jasmine: #FFE985;
+  --color-cambridge: #83B0AC;
+  /* card background when text is eggshell */
+  --color-black-olive: #323120;
+  /* for links, elements with attention drawn to them */
+  --color-mauve: #DEA7FC;
+
+  --color-text: var(--color-eggshell);
+  --color-background: var(--color-black-olive);
+  --color-link: var(--color-mauve);
 
   /* Color */
   --color-purple-light: #e8c3f8;
@@ -13,14 +26,14 @@
   --color-yellow: #ffd493;
 
   /* Type */
-  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --step-3: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
-  --step-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
-  --step-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
+  --step--2: 0.55rem;
+  --step--1: 0.75rem;
+  --step-0: 1.0rem;
+  --step-1: 1.3625rem;
+  --step-2: 1.7531rem;
+  --step-3: 2.1413rem;
+  --step-4: 2.8519rem;
+  --step-5: 3.515rem;
 
   /* Space */
   --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
