@@ -23,7 +23,7 @@ collections:
         description: 'Homepage data'
         fields:
           - label: 'Service times'
-            name: 'service-times'
+            name: 'serviceTimes'
             widget: 'string' 
           - label: 'Announcements'
             name: 'announcements'
@@ -32,6 +32,7 @@ collections:
               - {
                   label: 'Announcement date',
                   name: "datetime",
+                  format: "LLL",
                   widget: "datetime"
                 }
               - { label: 'Announcement',

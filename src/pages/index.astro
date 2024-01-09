@@ -3,15 +3,13 @@ import Layout from "@layouts/Layout.astro";
 import SkipLink from "@utils/SkipLink.astro";
 import ExternalLink from "@utils/ExternalLink.astro";
 import BackToTop from "@utils/BackToTop.astro";
+import yml from '../../site/content/homepage.yml';
 ---
 
 <Layout title="Astronaut - Astro starter template">
   <SkipLink />
   <div class="sr-only" id="start"></div>
-  
-
   <div class="wrapper">
-  
     <main id="main">
       <!-- CLC intro section component -->
       <div class="overlay"></div>
@@ -41,17 +39,17 @@ import BackToTop from "@utils/BackToTop.astro";
       </section>
       <section aria-label="Service time">
         <h3>Service times</h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        <div>
+          { yml.serviceTimes }
+        </div>
       </section>
       <section aria-label="Announcements">
         <h3>Announcements</h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        <ul>
+          {yml.announcements.map((item: any) => (
+            <li>{item.datetime} - {item.announcement}</li>
+          ))}
+        </ul>
       </section>
     </main>
   </div>

@@ -1,4 +1,4 @@
-service-times: 11:00 - Group yodeling
+serviceTimes: 11:00 - Group yodeling
 announcements:
   - datetime: 2024-01-09T02:10:21.345Z
     announcement: Next Tuesday, she'll be coming around the mountain.
