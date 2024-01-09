@@ -1,14 +1,15 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main # change this to your branch
   repo: garrison0/clc # change this to your repo
   site_domain: melodic-brioche-682b75.netlify.app # change this to your domain
   base_url: https://melodic-brioche-682b75.netlify.app/ # change this to your prod URL
+  auth_endpoint: oauth
 
 site_url: https://melodic-brioche-682b75.netlify.app/
 
 publish_mode: editorial_workflow
-media_folder: assets/uploads
+media_folder: "assets/uploads"
 
 collections:
   - name: 'settings'
