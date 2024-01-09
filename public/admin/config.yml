@@ -24,7 +24,20 @@ collections:
         fields:
           - label: 'Service times'
             name: 'serviceTimes'
-            widget: 'string' 
+            widget: 'list'
+            fields:
+              - { label: 'Day of week', 
+                  name: "day", 
+                  widget: select,
+                  options: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                } 
+              - { label: "Start time",
+                  name: "start",
+                  widget: "datetime",
+                  date_format: false, # e.g. 24.12.2021,
+                  time_format: "HH:mm", # e.g. 21:07,
+                }
+              - { label: 'Title', name: 'title', widget: 'string' }
           - label: 'Announcements'
             name: 'announcements'
             widget: list
