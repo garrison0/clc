@@ -32,7 +32,6 @@ collections:
               - {
                   label: 'Announcement date',
                   name: "datetime",
-                  format: "LLL",
                   widget: "datetime"
                 }
               - { label: 'Announcement',
