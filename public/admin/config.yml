@@ -14,7 +14,6 @@ media_folder: "assets/uploads"
 collections:
   - name: 'pages'
     label: 'Pages'
-    folder: "_pages"
     delete: false # Prevent users from deleting documents in this collection
     files:
       - name: 'homepage'
