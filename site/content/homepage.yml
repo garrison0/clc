@@ -1,3 +1,16 @@
+serviceTimes:
+  - day: Sunday
+    start: " 10:00am"
+    title: Bible Study
+  - day: Sunday
+    start: Divine Service with Holy Communion
+    title: 11:00am
+  - day: Sunday
+    title: ESL English Classes
+    start: 2:00pm
+  - day: Sunday
+    start: 5:00pm
+    title: United Bengali Lutheran Church Worship Service in Bangla
 announcements:
   - datetime: 2024-01-09T02:10:21.345Z
     title: Guest lecturer visiting Woodside!
