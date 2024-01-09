@@ -4,6 +4,7 @@ backend:
   repo: garrison0/clc # change this to your repo
   site_domain: melodic-brioche-682b75.netlify.app # change this to your domain
   base_url: https://melodic-brioche-682b75.netlify.app/ # change this to your prod URL
+  auth_endpoint: oauth # the oauth route provided by the integration
 
 site_url: https://melodic-brioche-682b75.netlify.app/
 
