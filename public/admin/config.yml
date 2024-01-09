@@ -12,34 +12,30 @@ publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 
 collections:
-  - name: 'settings'
-    label: 'Settings'
+  - name: 'pages'
+    label: 'Pages'
+    folder: "_pages"
     delete: false # Prevent users from deleting documents in this collection
-    editor:
-      preview: false
     files:
-      - name: 'general'
-        label: 'Site Settings'
-        file: '_data/settings.json'
-        description: 'General Site Settings'
+      - name: 'homepage'
+        label: 'Homepage'
+        file: 'site/content/homepage.yml'
+        # service times, list of announcements
+        description: 'Homepage data'
         fields:
-          - { label: 'Global title', name: 'site_title', widget: 'string' }
-          - label: 'Post Settings'
-            name: posts
-            widget: 'object'
+          - label: 'Service times'
+            name: 'service-times'
+            widget: 'string' 
+          - label: 'Announcements'
+            name: 'announcements'
+            widget: list
             fields:
               - {
-                  label: 'Number of posts on frontpage',
-                  name: front_limit,
-                  widget: number,
-                  min: 1,
-                  max: 10,
+                  label: 'Announcement date',
+                  name: "datetime",
+                  widget: "datetime"
                 }
-              - { label: 'Default Author', name: author, widget: string }
-              - {
-                  label: 'Default Thumbnail',
-                  name: thumb,
-                  widget: image,
-                  class: 'thumb',
-                  required: false,
-                }
+              - { label: 'Announcement',
+                  name: 'announcement',
+                  widget: 'string'
+                ]
