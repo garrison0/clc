@@ -4,6 +4,7 @@ import SkipLink from "@utils/SkipLink.astro";
 import ExternalLink from "@utils/ExternalLink.astro";
 import BackToTop from "@utils/BackToTop.astro";
 import yml from '../../site/content/homepage.yml';
+import moment from 'moment';
 ---
 
 <Layout title="Astronaut - Astro starter template">
@@ -45,9 +46,19 @@ import yml from '../../site/content/homepage.yml';
       </section>
       <section aria-label="Announcements">
         <h3>Announcements</h3>
-        <ul>
-          {yml.announcements.map((item: any) => (
-            <li>{item.datetime} - {item.announcement}</li>
+        <ul class="announcements-list">
+          {yml.announcements.map((announcement: any) => (
+            <li class="announcement">
+              <small>
+                <bold>{ moment(announcement.datetime).format("LL") }</bold>
+              </small>
+              <h3 class="announcement-title">
+                <bold>{ announcement.title }</bold>
+              </h3>
+              <small>
+                { announcement.description }
+              </small>
+            </li>
           ))}
         </ul>
       </section>
@@ -62,6 +73,30 @@ import yml from '../../site/content/homepage.yml';
 </Layout>
 
 <style>
+  bold {
+    font-weight: 700;
+  }
+
+  .announcements-list { 
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    font-size: initial;
+  }
+
+  .announcement { 
+    border-top: 1px solid var(--color-eggshell);
+    padding: 1rem 0;
+  }
+
+  .announcement:is(:last-child) { 
+    border-bottom: 1px solid var(--color-eggshell);
+  }
+
+  .announcement-title { 
+    margin-bottom: 0;
+  }
+
   .wrapper {
     margin: 0 auto;
     max-width: 868px;

@@ -34,7 +34,11 @@ collections:
                   name: "datetime",
                   widget: "datetime"
                 }
-              - { label: 'Announcement',
-                  name: 'announcement',
+              - { label: 'Announcement title',
+                  name: 'title',
+                  widget: 'string'
+                }
+              - { label: 'Announcement description',
+                  name: 'description',
                   widget: 'string'
                 }
