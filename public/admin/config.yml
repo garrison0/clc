@@ -38,4 +38,4 @@ collections:
               - { label: 'Announcement',
                   name: 'announcement',
                   widget: 'string'
-                ]
+                }
