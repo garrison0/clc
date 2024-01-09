@@ -5,6 +5,8 @@ import ExternalLink from "@utils/ExternalLink.astro";
 import BackToTop from "@utils/BackToTop.astro";
 import yml from '../../site/content/homepage.yml';
 import moment from 'moment';
+
+const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
 ---
 
 <Layout title="Astronaut - Astro starter template">
@@ -41,19 +43,31 @@ import moment from 'moment';
       <section aria-label="Service time">
         <h3>Join us</h3>
         <div>
-          { yml.serviceTimes }
+          { 
+            Object.keys(servicesByDay).map((day: any) => 
+              <div>
+                <h4>{day}</h4>
+                {
+                  servicesByDay[day].map((service: any) => (
+                      <div>{service.start} - {service.title}</div>
+                  ))
+                }
+              </div>
+            )
+          }
+          
         </div>
       </section>
       <section aria-label="Announcements">
         <h3>Announcements</h3>
         <ul class="announcements-list">
-          {yml.announcements.map((announcement: any) => (
+          { yml.announcements.map((announcement: any) => (
             <li class="announcement">
               <small>
                 <bold>{ moment(announcement.datetime).format("LL") }</bold>
               </small>
               <h3 class="announcement-title">
-                <bold>{ announcement.title }</bold>
+                { announcement.title }
               </h3>
               <small>
                 { announcement.description }
