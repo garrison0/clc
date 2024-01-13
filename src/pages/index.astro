@@ -1,23 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import SkipLink from "@utils/SkipLink.astro";
 import ExternalLink from "@utils/ExternalLink.astro";
-import BackToTop from "@utils/BackToTop.astro";
 import yml from '../../site/content/homepage.yml';
 import moment from 'moment';
 
 const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
+
 ---
 
 <Layout title="Astronaut - Astro starter template">
-  <SkipLink />
   <div class="sr-only" id="start"></div>
   <div class="wrapper">
     <main id="main">
       <!-- CLC intro section component -->
-      <div class="overlay"></div>
-      <section id="introduction" aria-label="Christ Church introduction">
-        <div class="overlay-text">
+      <div class="overlay z-10"></div>
+      <section id="introduction" aria-label="Christ Church introduction"></section>
+      <section aria-label="Livestream service">
+        <div class="z-40">
           <h1>Christ Church Woodside</h1>
           <p>
             Celebrating God's Gospel to the world throughout the world's borough.
@@ -29,8 +28,6 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
             />
           </p>
         </div>
-      </section>
-      <section aria-label="Livestream service">
         <h3 class="livestream-header">Livestream service</h3>
         <iframe width="560" height="315" class="livestream"
           src="https://www.youtube.com/embed/FNal5F0UDVc?si=l8nHH24OA2qY-OyN" 
@@ -55,7 +52,6 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
               </div>
             )
           }
-          
         </div>
       </section>
       <section aria-label="Announcements">
@@ -78,19 +74,9 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
       </section>
     </main>
   </div>
-
-  <!--  -->
-  <div aria-label="Utilities">
-    <!-- You could also add a theme switch here or anything considered a utility -->
-    <BackToTop />
-  </div>
 </Layout>
 
 <style>
-  bold {
-    font-weight: 700;
-  }
-
   .announcements-list { 
     padding-left: 0;
     margin-top: 0;
@@ -111,12 +97,6 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
     margin-bottom: 0;
   }
 
-  .wrapper {
-    margin: 0 auto;
-    max-width: 868px;
-    padding: 0 var(--space-s);
-  }
-
   img {
     height: auto;
     margin: var(--space-l) 0;
@@ -124,7 +104,7 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
 
   section:not(#introduction) {
     background-color: var(--color-background);
-    z-index: 100;
+    z-index: 10;
     position: relative;
     padding: 2rem 2.75rem;
   }
@@ -144,11 +124,6 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
     bottom: 0;
     left: 0;
     background-color: rgba(33,27,23,.59);
-    z-index: 99;
-  }
-
-  #main { 
-    position: relative;
   }
 
   #introduction { 
@@ -164,11 +139,6 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
     background-size: cover;
     margin: 0;
     min-height: 35rem;
-  }
-
-  .overlay-text { 
-    padding: 0 25px;
-    z-index: 100;
   }
 
   #template-button {

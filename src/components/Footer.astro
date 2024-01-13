@@ -9,7 +9,8 @@ import { socials} from '../data/socials'
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    color: black
+    padding-bottom: 8rem;
+    color: black;
   }
   .footer__socials {
     margin: 0;
@@ -21,14 +22,17 @@ import { socials} from '../data/socials'
   .footer__socials li a {
     display: flex;
   }
+  .social__icon { 
+    font-size: 2.5rem;
+  }
 </style>
 
 <footer>
   <ul class="footer__socials fade-in">
     {socials.map((social) => (
-      <li class="socal__link">
+      <li class="social__link">
         <a href={social.url} target="_blank" rel="noopener noreferrer">
-          <Icon name={social.icon} />
+          <Icon class="social__icon" name={social.icon} />
         </a>
       </li>
     ))}

@@ -14,18 +14,20 @@ media_folder: "assets/uploads"
 collections:
   - name: 'pages'
     label: 'Pages'
+    editor:
+      preview: false
     delete: false # Prevent users from deleting documents in this collection
     files:
       - name: 'homepage'
         label: 'Homepage'
         file: 'site/content/homepage.yml'
-        # service times, list of announcements
         description: 'Homepage data'
         fields:
           - label: 'Service times'
             name: 'serviceTimes'
             widget: 'list'
             fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Day of week', 
                   name: "day", 
                   widget: select,
@@ -35,21 +37,75 @@ collections:
                   name: "start",
                   widget: "string"
                 }
-              - { label: 'Title', name: 'title', widget: 'string' }
           - label: 'Announcements'
             name: 'announcements'
             widget: list
             fields:
+              - { label: 'Announcement title',
+                  name: 'title',
+                  widget: 'string'
+                }
               - {
                   label: 'Announcement date',
                   name: "datetime",
                   widget: "datetime"
                 }
-              - { label: 'Announcement title',
-                  name: 'title',
-                  widget: 'string'
-                }
               - { label: 'Announcement description',
                   name: 'description',
                   widget: 'string'
                 }
+      - name: 'about'
+        label: 'About page'
+        file: 'site/content/about.yml'
+        description: 'About page data'
+        fields:
+          - {label: "Church description", name: "description", widget: "text"}
+          - {label: "What we believe", name: "beliefs", widget: "text"}
+          - label: 'Staff information'
+            name: 'staffInformation'
+            widget: 'list'
+            fields:
+              - { label: 'Work title', name: 'title', widget: 'string' }
+              - { label: "name", name: "name", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone number", name: "phone", widget: "string", required: false }
+              - { label: 'Description', name: 'description', widget: 'text', required: false }
+              - label: "Headshot"
+                name: "headshot"
+                widget: "image"
+                choose_url: true
+                required: false
+      - name: 'Contact'
+        label: 'Contact page'
+        file: 'site/content/contact.yml'
+        description: 'Contact page data'
+        fields:
+          - { label: 'Address', name: 'address', widget: 'string' }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone number", name: "phone", widget: "string" }
+          - { label: "Fax", name: "fax", widget: "string", required: false }
+          - { label: "Pastoral care description", name: "pastoralCareDescription", widget: "text" }
+          - label: 'Pastoral care information'
+            name: 'pastoralCare'
+            widget: 'list'
+            fields:
+            - { label: "Type of care", name: "typeOfCare", widget: "string" }
+            - { label: "Description of care", name: "description", widget: "text" }
+      - name: 'Ministries'
+        label: 'Ministries page'
+        file: 'site/content/ministries.yml'
+        description: 'Ministries page data'
+        fields:
+          - label: "Ministry"
+            name: 'ministry'
+            widget: 'list'
+            fields:
+            - { label: 'Title of ministry', name: 'title', widget: 'string' }
+            - { label: "Description of ministry", name: "email", widget: "text" }
+            - { label: "Ministry picture", name: "image", widget: "image", required: false }
+            - label: 'Calls to action'
+              name: 'callsToAction'
+              widget: 'list'
+              fields:
+              - { label: "Call to action/title", name: "callToAction", widget: "string" }
+              - { label: "Action to take", name: "action", widget: "text" }
