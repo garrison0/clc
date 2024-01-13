@@ -1,10 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import ExternalLink from "@utils/ExternalLink.astro";
-import yml from '../../site/content/homepage.yml';
+import homepage from '../../site/content/homepage.yml';
 import moment from 'moment';
+import _ from 'lodash';
 
-const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
+const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 
 ---
 
@@ -57,7 +58,7 @@ const servicesByDay = Object.groupBy(yml.serviceTimes, ({ day }) => day);
       <section aria-label="Announcements">
         <h3>Announcements</h3>
         <ul class="announcements-list">
-          { yml.announcements.map((announcement: any) => (
+          { homepage.announcements.map((announcement: any) => (
             <li class="announcement">
               <small>
                 <bold>{ moment(announcement.datetime).format("LL") }</bold>

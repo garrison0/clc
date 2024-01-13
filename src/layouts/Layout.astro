@@ -115,7 +115,7 @@ const socialImageURL = new URL("/seo.png", Astro.url);
   document.querySelectorAll(".navbar-link").forEach((link) => {
     // link.classList.add("bg-gray-200");
     // link.classList.remove("bg-transparent");
-    if (link.href === window.location.href) {
+    if (link instanceof HTMLAnchorElement && link.href === window.location.href) {
       link.classList.add("bg-gray-200");
       link.classList.remove("bg-transparent");
       link.setAttribute("aria-current", "page");
