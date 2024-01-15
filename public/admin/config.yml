@@ -61,6 +61,22 @@ collections:
         fields:
           - {label: "Church description", name: "description", widget: "text"}
           - {label: "What we believe", name: "beliefs", widget: "text"}
+          - { label: "Pastoral care description", name: "pastoralCareDescription", widget: "text" }
+          - label: 'Pastoral care information'
+            name: 'pastoralCare'
+            widget: 'list'
+            fields:
+            - { label: "Type of care", name: "typeOfCare", widget: "string" }
+            - { label: "Description of care", name: "description", widget: "text" }
+      - name: 'Contact'
+        label: 'Contact page'
+        file: 'site/content/contact.yml'
+        description: 'Contact page data'
+        fields:
+          - { label: 'Address', name: 'address', widget: 'string' }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone number", name: "phone", widget: "string" }
+          - { label: "Fax", name: "fax", widget: "string", required: false }
           - label: 'Staff information'
             name: 'staffInformation'
             widget: 'list'
@@ -75,37 +91,27 @@ collections:
                 widget: "image"
                 choose_url: true
                 required: false
-      - name: 'Contact'
-        label: 'Contact page'
-        file: 'site/content/contact.yml'
-        description: 'Contact page data'
-        fields:
-          - { label: 'Address', name: 'address', widget: 'string' }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Phone number", name: "phone", widget: "string" }
-          - { label: "Fax", name: "fax", widget: "string", required: false }
-          - { label: "Pastoral care description", name: "pastoralCareDescription", widget: "text" }
-          - label: 'Pastoral care information'
-            name: 'pastoralCare'
-            widget: 'list'
-            fields:
-            - { label: "Type of care", name: "typeOfCare", widget: "string" }
-            - { label: "Description of care", name: "description", widget: "text" }
       - name: 'Ministries'
         label: 'Ministries page'
         file: 'site/content/ministries.yml'
         description: 'Ministries page data'
         fields:
-          - label: "Ministry"
-            name: 'ministry'
+          - label: "Ministries"
+            name: 'ministries'
             widget: 'list'
             fields:
             - { label: 'Title of ministry', name: 'title', widget: 'string' }
-            - { label: "Description of ministry", name: "email", widget: "text" }
+            - { label: "Description of ministry", name: "description", widget: "text" }
             - { label: "Ministry picture", name: "image", widget: "image", required: false }
             - label: 'Calls to action'
               name: 'callsToAction'
               widget: 'list'
               fields:
-              - { label: "Call to action/title", name: "callToAction", widget: "string" }
-              - { label: "Action to take", name: "action", widget: "text" }
+              - { label: "Header", name: "header", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: 'Call to action', 
+                  required: false,
+                  name: "call", 
+                  widget: select,
+                  options: ["Contact the church office", "Contact our pastor"]
+                } 

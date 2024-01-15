@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import ExternalLink from "@utils/ExternalLink.astro";
+import Header from "@components/utils/Header.astro";
 import homepage from '../../site/content/homepage.yml';
 import moment from 'moment';
 import _ from 'lodash';
@@ -9,7 +10,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 
 ---
 
-<Layout title="Astronaut - Astro starter template">
+<Layout title="Christ Church - a congregation of the LCMS">
   <div class="sr-only" id="start"></div>
   <div class="wrapper">
     <main id="main">
@@ -18,7 +19,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
       <section id="introduction" aria-label="Christ Church introduction"></section>
       <section aria-label="Livestream service">
         <div class="z-40">
-          <h1>Christ Church Woodside</h1>
+          <Header text="Christ Church Woodside" />
           <p>
             Celebrating God's Gospel to the world throughout the world's borough.
           </p>

@@ -53,6 +53,11 @@ body {
   color: var(--color-text);
 }
 
+html {
+  scroll-padding-top: 34px;
+  /* scroll-margin-top: 1px; */
+}
+
 body nav {
   display: flex;
   justify-content: space-between;

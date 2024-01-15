@@ -1,16 +1,24 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import aboutPage from '../../site/content/about.yml';
+import Header from "@components/utils/Header.astro";
 ---
 
 <Layout title="About us">
   <body>
     <div class="p-10">
       <h1>About us</h1>
-      <p>
-        Looks like something is wrong with the URL. Let's take you back to the <a
-          href="/">Homepage</a
-        >!
-      </p>
+      <div>{ aboutPage.description }</div>
+      <Header text="Our beliefs" />
+      <div>{ aboutPage.beliefs }</div>
+      <Header text="Pastoral care" />
+      <div>{ aboutPage.pastoralCareDescription }</div>
+      { aboutPage.pastoralCare.map( (care: any) => (
+            <Header text={care.typeOfCare} />
+            <div>{ care.description }</div>
+          )
+        )
+      }
     </div>
   </body>
 </Layout>

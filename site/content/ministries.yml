@@ -1,6 +1,6 @@
-ministry:
+ministries:
   - title: Dinner and Discipleship
-    email: >-
+    description: >-
       Our lives as Christians are lives of discipleship. Being a disciple is
       more than an hour a week on Sundays but a whole life of being with and
       following Jesus. Because Jesus is our crucified and risen Lord, He is a
@@ -10,12 +10,12 @@ ministry:
 
       Dinner and Discipleship is a weekly gathering for the young adults of Christ Church to share a meal and learn more about living with Jesus every day of our lives as we grow more mature in our Christian life. If you are in your 20's or 30's and are eager to explore your discipleship with Jesus this is the place for you! 
     callsToAction:
-      - callToAction: Join us!
-        action: |-
+      - header: Join us!
+        description: |-
           Please Contact Pastor Alex for place and time! 
           revalexchristwoodside@gmail.com
   - title: English as a Second Language Classes
-    email: >-
+    description: >-
       English as a Second Language classes are a great way to learn English in a
       welcoming and friendly environment. We've been teaching ESL at Christ
       Lutheran Church since ....
@@ -23,15 +23,15 @@ ministry:
 
       --^ please expand this description!
     callsToAction:
-      - callToAction: Join us for classes!
-        action: Please contact the church office to sign up or for more information.
-      - callToAction: Want to help volunteer or teach English classes?
-        action: |-
+      - header: Join us for classes!
+        description: Please contact the church office to sign up or for more information.
+      - header: Want to help volunteer or teach English classes?
+        description: |-
           Sign up to help out once a month, once a week, or as needed.
 
           Please contact the church office.
   - title: Women of Faith
-    email: "Each month the women of Christ Church gather together for food and
+    description: "Each month the women of Christ Church gather together for food and
       fellowship, Bible study, prayer and service projects. We are strengthened
       by a welcoming community of women of all ages as we share our own life
       journeys – joys and struggles - and how God is leading us to greater trust
@@ -40,12 +40,12 @@ ministry:
       women in the Bible as we explore what it means to love God with all our
       heart, soul, mind and strength.  "
     callsToAction:
-      - callToAction: Join us!
-        action: |-
+      - header: Join us!
+        description: |-
           When | 2nd Saturday of Every Month
           Time | 10 - 12 noon
           Where | Family Life Center
-  - email: >-
+  - description: >-
       Our concern for our neighbors doesn't end at the borders of our
       neighborhood -
 
@@ -59,13 +59,13 @@ ministry:
       that we can strengthen our communities through support and understanding.  
     title: Dominican Republic
     callsToAction:
-      - callToAction: Interested in joining a servant team or becoming involved?
-        action: Please contact the church office.
+      - header: Interested in joining a servant team or becoming involved?
+        description: Please contact the church office.
   - title: Music
-    email: At Christ Church we welcome you to share your musical gifts. Whether it's
+    description: At Christ Church we welcome you to share your musical gifts. Whether it's
       singing in the choir, playing a musical instrument, writing songs,
       composing music or teaching music to our children and youth, we invite you
       to make a joyful noise!
     callsToAction:
-      - callToAction: Interested in joining choir or in teaching opportunities?
-        action: Please contact the church office.
+      - header: Interested in joining choir or in teaching opportunities?
+        description: Please contact the church office.

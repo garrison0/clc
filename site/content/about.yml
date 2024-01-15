@@ -11,27 +11,38 @@ beliefs: >
   out our faith through seeking to put Jesus' words found in Luke 10:27 into
   practice. "love the Lord your God with all your heart, all your soul, all your
   strength, and all your mind. And, love your neighbor as yourself."  
-staffInformation:
-  - description: >-
-      The Rev. Alex Marque was installed as the pastor of Christ Church Woodside
-      on January 7th, 2023.  Pastor Alex is thrilled to be in Queens, NY
-      proclaiming the good news of the Kingdom of God in Queens and serving the
-      Body of Christ gathered around Word and Sacrament at Christ Church in
-      Woodside! 
+pastoralCareDescription: "We all go through ups and downs. Sometimes life seems
+  amazing, other times it's overwhelming. At Christ Church we have a team of
+  people along with our pastor who offer care and support to help you face
+  life's challenges and celebrate with you during life's joys, ultimately
+  finding hope through Christ who sustains us through it all.  "
+pastoralCare:
+  - typeOfCare: Prayer
+    description: "We have a team of prayer partners who are willing to pray with you
+      or for you.  Please contact the church office if you would like your
+      prayer request added to our weekly prayer list, or if you would like to
+      meet with someone for prayer. "
+  - typeOfCare: Weddings
+    description: Please contact the church office if you are interested in
+      premarital counseling and wedding planning.
+  - typeOfCare: Healing
+    description: >+
+      Please contact the church office if you would like to receive anointing
+      with oil and prayer.
+
+  - typeOfCare: Counseling
+    description: >-
+      We have a counseling center on site in the Family Life Center with
+      services available from the Lutheran Counseling Center of New York.
 
 
-      When Pastor Alex isn't leading worship, preaching, counseling, leading bible studies, visiting with the people of Christ Church, getting to know the community, or studying early church history and the church fathers, you will mostly like find him spending time with his wife, playing jazz bass, reading in coffee shops around Queens, taking long walks while listening to audio books, going on dates with his wife to museums and jazz clubs, as well as finding fun bookstores and comic shops...not to mention, finding the best food spots around Queens! 
+      The counselor in residence is Rev. Ronald Lehenbauer.
 
 
-      Pastor Alex is excited to get to know you and serve you with God's love in Jesus! 
-    email: revalexchristwoodside@gmail.com
-    name: Alex Marque
-    title: Pastor
-  - name: Marlene Beckett
-    title: Administrative Assistant
-    email: clcny@aol.com
-    phone: (718) 639-3945
-    description: ""
-  - title: Director of Music
-    name: Shawn Beckett
-    email: clcny@aol.com
+      All sessions are by appointment.
+
+
+      Please call the Lutheran Counseling Center for further information.
+
+      (516) 741-0994 or 1-800-317-1173    
+

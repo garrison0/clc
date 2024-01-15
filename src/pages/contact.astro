@@ -1,16 +1,35 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import contactPage from '../../site/content/contact.yml';
+import Header from "@components/utils/Header.astro";
 ---
 
 <Layout title="Contact">
   <body>
     <div class="p-10">
       <h1>Contact</h1>
-      <p>
-        Looks like something is wrong with the URL. Let's take you back to the <a
-          href="/">Homepage</a
-        >!
-      </p>
+      <Header text="Christ Church contact information" />
+      <div> Address: { contactPage.address } </div>
+      <div> Email: { contactPage.email } </div>
+      <div> Phone: { contactPage.phone } </div>
+      <div> Fax: { contactPage.fax } </div>
+      <Header text="Staff information" />
+      {
+        contactPage.staffInformation.map( (member) => 
+          member.description ? 
+          (
+            <div>Title: { member.title }</div>
+            <div>Name: { member.name }</div>
+            <div>Email: { member.email }</div>
+            <div>{ member.description }</div>
+          ) : 
+          (
+            <div>Title: { member.title }</div>
+            <div>Name: { member.name }</div>
+            <div>Email: { member.email }</div>
+          )
+        )
+      }
     </div>
   </body>
 </Layout>

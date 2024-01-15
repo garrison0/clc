@@ -1,0 +1,45 @@
+---
+export interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+const encodedText = encodeURI(text);
+const headerLink = "#" + encodedText;
+
+---
+
+<script>
+  function copyURI(href) {
+    navigator.clipboard.writeText(href).then(() => {
+        /* clipboard successfully set */
+    }, () => {
+        /* clipboard write failed */
+    })
+  };
+
+  const links = document.querySelectorAll('.hash-link');
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (link instanceof HTMLAnchorElement) 
+        copyURI(link.href);
+    });
+  });
+</script>
+
+<div id={encodedText}>
+  <a href={headerLink} class="underline hash-link"
+    >{text} #
+  </a> 
+</div>
+
+<style>
+  a {
+    align-items: center;
+    color: var(--color-link);
+    display: inline-flex;
+    gap: var(--space-3xs);
+    width: fit-content;
+  }
+</style>

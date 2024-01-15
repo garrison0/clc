@@ -1,16 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import ministryPage from '../../site/content/ministries.yml';
+import Header from "@components/utils/Header.astro";
 ---
 
 <Layout title="Ministries">
   <body>
     <div class="p-10">
       <h1>Ministries</h1>
-      <p>
-        Looks like something is wrong with the URL. Let's take you back to the <a
-          href="/">Homepage</a
-        >!
-      </p>
+      {
+        ministryPage.ministries.map( (ministry: any) => (
+            <Header text={ministry.title} />
+            <div>
+              {ministry.description}
+            </div>
+          )
+        )
+      }
     </div>
   </body>
 </Layout>

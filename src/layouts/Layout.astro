@@ -3,6 +3,7 @@ import "@styles/reset.css";
 import "@styles/global.css";
 import "@styles/variables.css";
 import { Image } from "astro:assets";
+import ministryPage from '../../site/content/ministries.yml';
 import Footer from '@components/Footer.astro';
 import SkipLink from "@utils/SkipLink.astro";
 import BackToTop from "@utils/BackToTop.astro";
@@ -15,18 +16,18 @@ export interface Props {
 const { title } = Astro.props;
 
 const metaData = {
-  keywords: "html, css, javascript, astro, static site generator",
-  description: "Astronaut - Starter template for static site generator Astro",
+  keywords: "lutheran, lutheran church, lutheran church woodside, woodside, church, missouri synod, lcms, lcms woodside, new york city lcms, nyc lutheran",
+  description: "Christ Lutheran Church - a congregation of the Lutheran Church--Missouri Synod",
   imageType: "image/png",
   imageWidth: "1600",
   imageHeight: "882",
   type: "website",
-  siteName: "Astronaut",
+  siteName: "Christ Church",
   twitterCard: "summary_large_image",
 };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImageURL = new URL("/seo.png", Astro.url);
+const socialImageURL = new URL(logo.src, Astro.url);
 
 ---
 
@@ -38,7 +39,7 @@ const socialImageURL = new URL("/seo.png", Astro.url);
     <meta name="generator" content={Astro.generator} />
     <meta name="keywords" content={metaData.keywords} />
     <meta name="description" content={metaData.description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon-astronaut.svg" />
+    <link rel="icon" type="image/svg+xml" href={logo.src} />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta property="og:url" content={canonicalURL} />
@@ -74,17 +75,18 @@ const socialImageURL = new URL("/seo.png", Astro.url);
           <a class="navbar-link px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/about">About</a>
           <a class="navbar-link px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/calendar">Calendar</a>
           <div @click.away="open = false" class="relative" x-data="{ open: false }">
-            <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+            <button @click="open = !open" class="navbar-dropdown flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
               <span>Ministries</span>
               <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
               <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                <a class="navbar-link block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/ministries#divine-service">Divine Service</a>
-                <a class="navbar-link block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/ministries#esl">ESL</a>
-                <a class="navbar-link block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/ministries#bible-studies">Bible studies</a>
-                <a class="navbar-link block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/ministries#women-of-faith">Women of faith</a>
-                <a class="navbar-link block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/ministries#dinner-and-discipleship">Dinner and Discipleship</a>
+                { 
+                  ministryPage.ministries.map( (ministry: any) => (
+                    <a class="navbar-link block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={"/ministries#" + encodeURI(ministry.title)}>{ministry.title}</a>
+                    )
+                  )
+                }
               </div>
             </div>
           </div>
@@ -112,15 +114,24 @@ const socialImageURL = new URL("/seo.png", Astro.url);
 </html>
 
 <script>
+  import _ from 'lodash';
+
   document.querySelectorAll(".navbar-link").forEach((link) => {
-    // link.classList.add("bg-gray-200");
-    // link.classList.remove("bg-transparent");
     if (link instanceof HTMLAnchorElement && link.href === window.location.href) {
       link.classList.add("bg-gray-200");
       link.classList.remove("bg-transparent");
       link.setAttribute("aria-current", "page");
     }
   });
+  document.querySelectorAll(".navbar-dropdown").forEach((elem) => {
+    if (elem.nextElementSibling 
+      && elem.nextElementSibling.firstElementChild
+      && elem.nextElementSibling.firstElementChild.children
+      && _.filter(elem.nextElementSibling.firstElementChild.children, (e: HTMLAnchorElement) => e.href === window.location.href).length) {
+        elem.classList.add("bg-gray-200");
+        elem.classList.remove("bg-transparent");
+    }
+  })
 </script>
 
 <style>
