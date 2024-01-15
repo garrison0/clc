@@ -69,3 +69,9 @@ ministries:
       - header: Interested in joining choir or in teaching opportunities?
         description: ""
         call: Contact the church office
+  - title: Patristics book club
+    description: description of our group, intent...
+    callsToAction:
+      - call: Contact our pastor
+        description: Contact Pastor Alex for more information.
+        header: Join us!
