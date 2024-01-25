@@ -1,10 +1,4 @@
-description: >
-  We are a congregation of the Lutheran Church Missouri Synod. An
-  intergenerational and multicultural church. People called together in Christ
-  to share God's message of hope with everyone we meet. Our concern for our
-  neighbor extends in service and hospitality to our community and globally as
-  we are embraced by the expanding love of God which opens our hearts to the
-  world. We welcome you to join us!
+description: Join us!
 beliefs: >
   We are a congregation of the Lutheran Church Missouri Synod. As Lutherans, we
   affirm the Nicene Creed which gives a summary of our beliefs. We seek to live
@@ -18,31 +12,22 @@ pastoralCareDescription: "We all go through ups and downs. Sometimes life seems
   finding hope through Christ who sustains us through it all.  "
 pastoralCare:
   - typeOfCare: Prayer
-    description: "We have a team of prayer partners who are willing to pray with you
-      or for you.  Please contact the church office if you would like your
-      prayer request added to our weekly prayer list, or if you would like to
-      meet with someone for prayer. "
+    description: We have a team of prayer partners who are willing to pray with you
+      or for you. Get added to our weekly prayer list, or meet with someone for
+      prayer.
   - typeOfCare: Weddings
-    description: Please contact the church office if you are interested in
-      premarital counseling and wedding planning.
+    description: Receive premarital counseling or get help with wedding planning.
   - typeOfCare: Healing
-    description: >+
-      Please contact the church office if you would like to receive anointing
-      with oil and prayer.
+    description: |+
+      Receive anointing with oil and prayer.
 
   - typeOfCare: Counseling
-    description: >-
-      We have a counseling center on site in the Family Life Center with
-      services available from the Lutheran Counseling Center of New York.
-
+    description: |-
+      Get counseling services from the Lutheran Counseling Center of New York.
 
       The counselor in residence is Rev. Ronald Lehenbauer.
 
-
       All sessions are by appointment.
 
-
-      Please call the Lutheran Counseling Center for further information.
-
+      Please call the Lutheran Counseling Center for further information:
       (516) 741-0994 or 1-800-317-1173    
-
