@@ -1,0 +1,63 @@
+---
+export interface Props {
+  care: any
+}
+
+const { care } = Astro.props;
+
+---
+
+<div class="card">
+  <div class="container">
+    <div class="font-bold">
+      { care.typeOfCare }
+    </div>
+    <div>
+      { care.description }
+    </div>
+  </div>
+</div>
+
+<style>
+  .container { 
+    
+  }
+
+  .image-container { 
+    margin: 1.5rem;
+    width: 150px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-container img { 
+    border-radius: 100%;
+  }
+
+  .card { 
+    color: var(--color-background);
+    background: #ffffff;
+    max-width: 280px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 4px rgba(0,0,0,0.5);
+  }
+
+  .description { 
+    padding: 0rem 3rem;
+    padding-bottom: 2rem;
+    font-size: 14px;
+  }
+
+  .staff-info {
+    padding: 1rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .staff-contact-info { 
+    padding: 0.1rem 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 14px;
+  }
+</style>

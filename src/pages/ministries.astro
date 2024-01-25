@@ -2,6 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import ministryPage from '../../site/content/ministries.yml';
 import Header from "@components/utils/Header.astro";
+import { callGetStaticPaths } from "node_modules/astro/dist/core/render/route-cache";
+import type { Code } from "astro:components";
 ---
 
 <Layout title="Ministries">
@@ -13,6 +15,18 @@ import Header from "@components/utils/Header.astro";
             <Header text={ministry.title} />
             <div>
               {ministry.description}
+            </div> 
+            <div>
+              {
+                ministry.callsToAction.map( ( call:any ) => (
+                  call.description ?
+                    <h4>{call.header}</h4>
+                    <div>{call.description}</div>
+                    <button type="button">{call.call}</button>
+                  : <h4>{call.header}</h4>
+                    <button type="button">{call.call}</button>
+                ))
+              }
             </div>
           )
         )

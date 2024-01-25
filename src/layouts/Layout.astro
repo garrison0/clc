@@ -60,7 +60,7 @@ const socialImageURL = new URL(logo.src, Astro.url);
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="w-full text-gray-700 max-h-16 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 z-50 fixed">
+    <div class="navbar w-full text-gray-700 max-h-16 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 z-50 fixed">
       <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="p-4 min-w-52 flex flex-row items-center justify-between">
           <a href="/" class="text-lg tracking-widest text-gray-900 uppercase font-semibold rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Christ Church</a>
@@ -143,12 +143,15 @@ const socialImageURL = new URL(logo.src, Astro.url);
   }
   .wrapper {
     margin: 0 auto;
-    max-width: 868px;
-    padding: 0 var(--space-s);
+    max-width: 760px;
+    padding: 0;
   }
   #main { 
     position: relative;
     background-color: var(--color-background);
-    padding-top: 64px;
+    padding-top: 58px;
+  }
+  .navbar { 
+    border-bottom: 1px solid var(--color-text-border);
   }
 </style>

@@ -59,7 +59,6 @@ collections:
         file: 'site/content/about.yml'
         description: 'About page data'
         fields:
-          - {label: "Church description", name: "description", widget: "text"}
           - {label: "What we believe", name: "beliefs", widget: "text"}
           - { label: "Pastoral care description", name: "pastoralCareDescription", widget: "text" }
           - label: 'Pastoral care information'

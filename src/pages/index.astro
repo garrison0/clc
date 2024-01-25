@@ -5,7 +5,7 @@ import Header from "@components/utils/Header.astro";
 import homepage from '../../site/content/homepage.yml';
 import moment from 'moment';
 import _ from 'lodash';
-
+import ImagePanels from "@components/ImagePanels.astro";
 const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 
 ---
@@ -16,21 +16,19 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
     <main id="main">
       <!-- CLC intro section component -->
       <div class="overlay z-10"></div>
-      <section id="introduction" aria-label="Christ Church introduction"></section>
-      <section aria-label="Livestream service">
-        <div class="z-40">
-          <Header text="Christ Church Woodside" />
-          <p>
-            Celebrating God's Gospel to the world throughout the world's borough.
-          </p>
-          <p>
-            A congregation of the <ExternalLink
-              href="https://www.lcms.org/"
-              name="Lutheran Church—Missouri Synod."
-            />
-          </p>
+      <section aria-label="Christ Church introduction">
+        <ImagePanels src="clc.jpeg" />
+        <div class="text-container">
+          <div class="title-text tracking-wide text-lg font-semibold rounded-lg pt-4">
+            Christ Church
+          </div>
+          <div class="pt-4">
+            A congregation of the <ExternalLink name="Lutheran Church--Missouri Synod" href="https://www.lcms.org/" />
+          </div>
         </div>
-        <h3 class="livestream-header">Livestream service</h3>
+      </section>
+      <section aria-label="Livestream service">
+        <Header text="Livestream service" />
         <iframe width="560" height="315" class="livestream"
           src="https://www.youtube.com/embed/FNal5F0UDVc?si=l8nHH24OA2qY-OyN" 
           title="YouTube video player" 
@@ -40,7 +38,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
         </iframe>
       </section>
       <section aria-label="Service time">
-        <h3>Join us</h3>
+        <Header text="Join us" />
         <div>
           { 
             Object.keys(servicesByDay).map((day: any) => 
@@ -57,7 +55,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
         </div>
       </section>
       <section aria-label="Announcements">
-        <h3>Announcements</h3>
+        <Header text="Announcements" />
         <ul class="announcements-list">
           { homepage.announcements.map((announcement: any) => (
             <li class="announcement">
@@ -87,16 +85,34 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   }
 
   .announcement { 
-    border-top: 1px solid var(--color-eggshell);
+    border-top: 1px solid var(--color-background-border);
     padding: 1rem 0;
   }
 
+  .announcement:is(:first-child) { 
+    border-top: none;
+  }
+
   .announcement:is(:last-child) { 
-    border-bottom: 1px solid var(--color-eggshell);
+    border-bottom: 1px solid var(--color-background-border);
   }
 
   .announcement-title { 
     margin-bottom: 0;
+  }
+
+  .text-container { 
+    text-align: center;
+  }
+
+  .title-text { 
+    font-family: "Inter", sans-serif;
+    font-size: var(--step-1);
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 36px;
   }
 
   img {
@@ -108,11 +124,13 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
     background-color: var(--color-background);
     z-index: 10;
     position: relative;
-    padding: 2rem 2.75rem;
   }
 
-  section:not(#introduction):not(:last-child) {
-    padding-bottom: 0;
+  section { 
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .button-wrapper {

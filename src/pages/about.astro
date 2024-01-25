@@ -2,23 +2,41 @@
 import Layout from "@layouts/Layout.astro";
 import aboutPage from '../../site/content/about.yml';
 import Header from "@components/utils/Header.astro";
+import PastoralCareCard from "@components/PastoralCareCard.astro";
 ---
 
 <Layout title="About us">
   <body>
     <div class="p-10">
       <h1>About us</h1>
-      <div>{ aboutPage.description }</div>
       <Header text="Our beliefs" />
       <div>{ aboutPage.beliefs }</div>
       <Header text="Pastoral care" />
       <div>{ aboutPage.pastoralCareDescription }</div>
-      { aboutPage.pastoralCare.map( (care: any) => (
-            <Header text={care.typeOfCare} />
-            <div>{ care.description }</div>
+      <div class="pastoral-care-container">
+        { aboutPage.pastoralCare.map( (care: any) => (
+              <PastoralCareCard care={care} />
+            )
           )
-        )
-      }
+        }
+
+      </div>
     </div>
   </body>
 </Layout>
+
+<style>
+  .about-page-description { 
+    padding-left: 20px;
+    padding-bottom: 20px;
+    max-width: 400px;
+  }
+
+  .pastoral-care-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+</style>

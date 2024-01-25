@@ -1,0 +1,63 @@
+---
+export interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+
+---
+
+<div class="container">
+  
+  <div class="image-container">
+    <div class="img">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</div>
+
+<style define:vars={{ image: `url("${src}")` }} >
+  .container { 
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-container { 
+    height: 290px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .image-container .img { 
+    margin: auto;
+    width: 180px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .image-container span { 
+    width: 44%;
+    height: 90%;
+    background: var(--image);
+    background-size: cover;
+    border-radius: 20px / 3%;
+    box-shadow: 8px 8px 4px rgba(0,0,0,0.5);
+  }
+
+  /* gothic window edition */
+  .image-container span:nth-child(1) { 
+    background-position: 0%;
+    border-radius: 100% 3px 10px 10px;
+  }
+
+  .image-container span:nth-child(2) { 
+    background-position: 50% -32px;
+    border-radius: 3px 100% 10px 10px;
+    align-self: end;
+  }
+</style>

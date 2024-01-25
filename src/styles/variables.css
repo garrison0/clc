@@ -6,13 +6,16 @@
   --color-jasmine: #FFE985;
   --color-cambridge: #83B0AC;
   /* card background when text is eggshell */
-  --color-black-olive: #323120;
+  --color-black-olive: #4d4c33;
   /* for links, elements with attention drawn to them */
   --color-mauve: #DEA7FC;
 
   --color-text: var(--color-eggshell);
   --color-background: var(--color-black-olive);
-  --color-link: var(--color-mauve);
+  --color-link: rgb(105, 145, 247);
+
+  --color-text-border: #3231202e;
+  --color-background-border: #ffffff60;
 
   /* Color */
   --color-purple-light: #e8c3f8;

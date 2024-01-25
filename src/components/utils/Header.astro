@@ -10,7 +10,7 @@ const headerLink = "#" + encodedText;
 ---
 
 <script>
-  function copyURI(href) {
+  function copyURI(href: any) {
     navigator.clipboard.writeText(href).then(() => {
         /* clipboard successfully set */
     }, () => {
@@ -28,18 +28,34 @@ const headerLink = "#" + encodedText;
   });
 </script>
 
-<div id={encodedText}>
-  <a href={headerLink} class="underline hash-link"
-    >{text} #
+<div id={encodedText} class="header">
+  <a href={headerLink} class="font-light"
+    >{text} <span class="hash-link">#</span>
   </a> 
 </div>
 
 <style>
+  .header { 
+    border-bottom: 1px solid var(--color-background-border);
+  }
+  
   a {
-    align-items: center;
-    color: var(--color-link);
     display: inline-flex;
-    gap: var(--space-3xs);
     width: fit-content;
+  }
+
+  .hash-link {
+    opacity: 0;
+    padding-left: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    user-select: none;
+  }
+
+  .hash-link:hover { 
+    opacity: 1;
+  }
+
+  a:hover .hash-link { 
+    opacity: 1;
   }
 </style>
