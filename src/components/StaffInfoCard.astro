@@ -13,7 +13,7 @@ import { Icon } from 'astro-icon/components';
       <img src="headshot.jpg" />
     </div>
     <div class="staff-info">
-      <div class="font-bold">{ staffMember.name }</div>
+      <div class="font-semibold">{ staffMember.name }</div>
       <div>{ staffMember.title }</div>
       {
         staffMember.phone && 
@@ -33,7 +33,9 @@ import { Icon } from 'astro-icon/components';
       </div>
     </div>
   </div>
-  <div class="description">{ staffMember.description }</div>
+  { staffMember.description && 
+    <p class="description">{ staffMember.description }</p>
+  }
 </div>
 
 
@@ -45,7 +47,7 @@ import { Icon } from 'astro-icon/components';
 
   .image-container { 
     margin: 1.5rem;
-    width: 150px;
+    width: 250px;
     overflow: hidden;
     position: relative;
   }
@@ -57,9 +59,8 @@ import { Icon } from 'astro-icon/components';
   .card { 
     color: var(--color-background);
     background: #ffffff;
-    max-width: 520px;
     border-radius: 5px;
-    margin: auto;
+    width: 100%;
     margin-top: 1.5rem;
     box-shadow: 8px 8px 4px rgba(0,0,0,0.5);
   }
@@ -67,19 +68,19 @@ import { Icon } from 'astro-icon/components';
   .description { 
     padding: 0rem 3rem;
     padding-bottom: 2rem;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .staff-info {
     padding: 1rem;
-    padding-right: 0;
+    padding-right: 1.5rem;
     padding-left: 0;
+    font-size: 18px;
   }
 
   .staff-contact-info { 
     padding: 0.1rem 0.5rem;
     padding-left: 0;
     padding-right: 0;
-    font-size: 14px;
   }
 </style>

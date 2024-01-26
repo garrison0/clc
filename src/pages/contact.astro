@@ -30,11 +30,13 @@ import StaffInfoCard from "@components/StaffInfoCard.astro";
         </div>
       </div>
       <Header text="Meet our staff" />
-      {
-        contactPage.staffInformation.map( (member: any) => 
-          <StaffInfoCard staffMember={member} />
-        )
-      }
+      <div class="staff-container">
+        {
+          contactPage.staffInformation.map( (member: any) => 
+            <StaffInfoCard staffMember={member} />
+          )
+        }
+      </div>
     </div>
   </body>
 </Layout>
@@ -43,5 +45,9 @@ import StaffInfoCard from "@components/StaffInfoCard.astro";
   .contact-info-card-image-container {
     padding-top: 1rem;
     margin: auto;
-   }
+  }
+  .staff-container { 
+    display: flex;
+    flex-direction: column;
+  }
 </style>

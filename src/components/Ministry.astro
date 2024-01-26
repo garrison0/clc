@@ -1,0 +1,102 @@
+---
+export interface Props {
+  ministry: any,
+  imageOnRight: boolean
+}
+
+const { ministry, imageOnRight } = Astro.props;
+
+import Header from './utils/Header.astro';
+import CallButton from './CallButton.astro';
+---
+
+
+<section class="container">
+  { imageOnRight ? (
+      <div class="ministry-container">
+        <Header text={ministry.title} />
+        <div class="ministry-description">
+          {ministry.description}
+        </div> 
+        <div class="calls-to-action-container">
+          {
+            ministry.callsToAction.map( ( call:any ) => (
+              call.description ?
+              <h4 class="call-header">{call.header}</h4>
+              <p class="call-description">{call.description}</p>
+              <CallButton call={call.call} />
+              : <h4 class="call-header">{call.header}</h4>
+              <CallButton call={call.call} />
+            ))
+          }
+        </div>
+      </div>
+      <div class="img-container pl-16">
+        <img src={ministry.imgSource ? ministry.imgSource : "clc-wowboy.jpeg"} class="ministry-img">
+      </div>
+    ) : (
+      <div class="img-container pr-16">
+        <img src={ministry.imgSource ? ministry.imgSource : "clc-wowboy.jpeg"} class="ministry-img">
+      </div>
+      <div class="ministry-container">
+        <Header text={ministry.title} />
+        <div class="ministry-description">
+          {ministry.description}
+        </div> 
+        <div class="calls-to-action-container">
+          {
+            ministry.callsToAction.map( ( call:any ) => (
+              call.description ?
+              <h4 class="call-header">{call.header}</h4>
+              <p class="call-description">{call.description}</p>
+              <CallButton call={call.call} />
+              : <h4 class="call-header">{call.header}</h4>
+              <CallButton call={call.call} />
+            ))
+          }
+        </div>
+      </div> 
+    )
+  }
+</section>
+
+<style>
+  section { 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .container { 
+    display: flex;
+    flex-direction: row;
+  }
+  .ministry-container { 
+    width: 50%;
+  }
+
+  .img-container { 
+    width: 50%;
+    display: flex;
+  }
+  
+  .calls-to-action-container { 
+    padding: 0;
+  }
+
+  .ministry-description { 
+    padding-top: 0.25rem;
+  }
+
+  .call-header { 
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--color-background-border)
+  }
+
+  .ministry-img { 
+    padding: 0;
+    align-self: center;
+    box-shadow: 5px 6px 4px rgba(0,0,0,0.5);
+    border-radius: 14px;
+  }
+</style>

@@ -1,36 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import ministryPage from '../../site/content/ministries.yml';
-import Header from "@components/utils/Header.astro";
-import { callGetStaticPaths } from "node_modules/astro/dist/core/render/route-cache";
-import type { Code } from "astro:components";
+import Ministry from "@components/Ministry.astro";
+
 ---
 
 <Layout title="Ministries">
   <body>
     <div class="p-10">
       <h1>Ministries</h1>
-      {
-        ministryPage.ministries.map( (ministry: any) => (
-            <Header text={ministry.title} />
-            <div>
-              {ministry.description}
-            </div> 
-            <div>
-              {
-                ministry.callsToAction.map( ( call:any ) => (
-                  call.description ?
-                    <h4>{call.header}</h4>
-                    <div>{call.description}</div>
-                    <button type="button">{call.call}</button>
-                  : <h4>{call.header}</h4>
-                    <button type="button">{call.call}</button>
-                ))
-              }
-            </div>
+      <div>
+        {
+          ministryPage.ministries.map( (ministry: any, index: number) => (
+              <Ministry ministry={ministry} imageOnRight={index % 2 == 0} />
+            )
           )
-        )
-      }
+        }
+      </div>
     </div>
   </body>
 </Layout>

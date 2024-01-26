@@ -32,9 +32,23 @@ const { href, fontSize, name } = Astro.props;
     font-size: var(--fontSize);
     gap: var(--space-3xs);
     width: fit-content;
+    text-decoration: none;
+    transition: color .4s, text-decoration .4s;
   }
 
-  path { 
-    fill: var(--color-link)
+  a:hover { 
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: color .15s, text-decoration .15s;
+  }
+
+  a path { 
+   fill: var(--color-link);
+   transition: fill .4s;
+  }
+
+  a:hover path { 
+    fill: var(--color-text);
+    transition: fill .15s;
   }
 </style>

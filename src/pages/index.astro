@@ -16,18 +16,18 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
     <main id="main">
       <!-- CLC intro section component -->
       <div class="overlay z-10"></div>
-      <section aria-label="Christ Church introduction">
-        <ImagePanels src="clc.jpeg" />
+      <section class="first-section" aria-label="Christ Church introduction">
+        <ImagePanels src="wowboy.jpeg" />
         <div class="text-container">
           <div class="title-text tracking-wide text-lg font-semibold rounded-lg pt-4">
             Christ Church
           </div>
-          <div class="pt-4">
+          <div class="pt-4 subtitle">
             A congregation of the <ExternalLink name="Lutheran Church--Missouri Synod" href="https://www.lcms.org/" />
           </div>
         </div>
       </section>
-      <section aria-label="Livestream service">
+      <section class="second-section" aria-label="Livestream service">
         <Header text="Livestream service" />
         <iframe width="560" height="315" class="livestream"
           src="https://www.youtube.com/embed/FNal5F0UDVc?si=l8nHH24OA2qY-OyN" 
@@ -39,14 +39,21 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
       </section>
       <section aria-label="Service time">
         <Header text="Join us" />
-        <div>
+        <div class="service-times-container">
           { 
             Object.keys(servicesByDay).map((day: any) => 
               <div>
                 <h4>{day}</h4>
                 {
                   servicesByDay[day].map((service: any) => (
-                      <div>{service.start} - {service.title}</div>
+                      <div>
+                        <div class="service-time">
+                          {service.start}
+                        </div>
+                        <div class="service-title">
+                          {service.title}
+                        </div>
+                      </div>
                   ))
                 }
               </div>
@@ -60,14 +67,14 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
           { homepage.announcements.map((announcement: any) => (
             <li class="announcement">
               <small>
-                <bold>{ moment(announcement.datetime).format("LL") }</bold>
+                <div>{ moment(announcement.datetime).format("LL") }</div>
               </small>
               <h3 class="announcement-title">
                 { announcement.title }
               </h3>
-              <small>
+              <div class="announcement-description">
                 { announcement.description }
-              </small>
+              </div>
             </li>
           ))}
         </ul>
@@ -77,28 +84,53 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 </Layout>
 
 <style>
+  :root { 
+    --list-padding: 1.5rem;
+  }
+
+  .service-time { 
+    display: inline-block;
+    min-width: 5rem;
+    border-right: 1px solid var(--color-background-border);
+  }
+
+  .service-title { 
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  small { 
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .subtitle { 
+    font-size: 19px;
+  }
+
   .announcements-list { 
     padding-left: 0;
-    margin-top: 0;
     list-style: none;
     font-size: initial;
   }
 
   .announcement { 
     border-top: 1px solid var(--color-background-border);
-    padding: 1rem 0;
+    padding: var(--list-padding) 0;
   }
 
-  .announcement:is(:first-child) { 
+  .announcement:first-child { 
     border-top: none;
-  }
-
-  .announcement:is(:last-child) { 
-    border-bottom: 1px solid var(--color-background-border);
   }
 
   .announcement-title { 
     margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .announcement-description {
+    font-size: 17px;
   }
 
   .text-container { 
@@ -106,13 +138,20 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   }
 
   .title-text { 
-    font-family: "Inter", sans-serif;
-    font-size: var(--step-1);
+    /* font-family: "Inter", sans-serif;
+    font-size: var(--step-1); */
     -webkit-hyphens: auto;
     hyphens: auto;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: 200;
+    font-size: 66px;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    line-height: 4.75rem;
+  }
+
+  .service-times-container { 
+    padding-top: 1.5rem;
   }
 
   img {
@@ -127,8 +166,8 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   }
 
   section { 
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -203,7 +242,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   .livestream { 
     margin-left: auto;
     display: block;
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-right: auto;
   }
 
@@ -250,8 +289,12 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
     margin: 0;
   }
 
-  .smol {
-    font-size: var(--step-0);
+  .first-section { 
+    padding-top: 5.75rem;
+  }
+
+  .second-section {
+    padding-top: 10rem;
   }
 
   footer {

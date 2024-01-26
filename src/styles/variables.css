@@ -11,8 +11,8 @@
   --color-mauve: #DEA7FC;
 
   --color-text: var(--color-eggshell);
-  --color-background: var(--color-black-olive);
-  --color-link: rgb(105, 145, 247);
+  --color-background: #1a3743;
+  --color-link: rgb(153 239 130);
 
   --color-text-border: #3231202e;
   --color-background-border: #ffffff60;

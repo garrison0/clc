@@ -1,0 +1,50 @@
+---
+export interface Props {
+  call: any
+}
+
+const ContactTypes = {
+  CONTACT_THE_PASTOR: "Contact our pastor",
+  CONTACT_THE_CHURCH_OFFICE: "Contact the church office"
+}
+const { call } = Astro.props;
+
+function getHREF(call:any) { 
+  switch(call){
+    case ContactTypes.CONTACT_THE_PASTOR:
+      return "/contact#Meet%20our%20staff";
+      break;
+    case ContactTypes.CONTACT_THE_CHURCH_OFFICE:
+      return "/contact#Contact%20the%20church%20office";
+      break;
+  } 
+}
+---
+
+{ call ? 
+  <a href={getHREF(call)} rel="noopener noreferrer" target="_blank">
+    <button type="button">{call}</button>
+  </a>
+  :
+  <></>
+}
+
+
+<style>
+  button { 
+    background: rgb(108 165 92);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    position: relative;
+    transition: background 0.1s ease-in, position 0.2s ease-in;
+  }
+
+  button:hover { 
+    background: rgb(73, 111, 62);
+    transform: translateY(-1px);
+  }
+</style>

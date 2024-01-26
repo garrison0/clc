@@ -4,23 +4,26 @@ export interface Props {
 }
 
 const { care } = Astro.props;
-
 ---
 
-<div class="card">
+<div class={"card" + (care.description.length > 140 ? " card-big" : "")}>
   <div class="container">
-    <div class="font-bold">
+    <div class="font-semibold care-header">
       { care.typeOfCare }
     </div>
-    <div>
-      { care.description }
+    <div class="description-container">
+      <p class="description">{ care.description.trim() }</p>
     </div>
   </div>
 </div>
 
 <style>
   .container { 
-    
+    padding: 1rem;
+  }
+
+  .care-header { 
+    border-bottom: 1px solid var(--color-text-border)
   }
 
   .image-container { 
@@ -37,15 +40,22 @@ const { care } = Astro.props;
   .card { 
     color: var(--color-background);
     background: #ffffff;
-    max-width: 280px;
     border-radius: 5px;
-    box-shadow: 8px 8px 4px rgba(0,0,0,0.5);
+    box-shadow: 8px 8px 6px 1px rgba(0,0,0,0.5);
+  }
+
+  .card-big { 
+    grid-column: span 2;
   }
 
   .description { 
-    padding: 0rem 3rem;
-    padding-bottom: 2rem;
-    font-size: 14px;
+    align-self: center;
+    font-size: 16px;
+  }
+
+  .description-container { 
+    display: flex;
+    margin-top: 0.5rem;
   }
 
   .staff-info {
@@ -58,6 +68,5 @@ const { care } = Astro.props;
     padding: 0.1rem 0.5rem;
     padding-left: 0;
     padding-right: 0;
-    font-size: 14px;
   }
 </style>

@@ -9,23 +9,32 @@ import PastoralCareCard from "@components/PastoralCareCard.astro";
   <body>
     <div class="p-10">
       <h1>About us</h1>
-      <Header text="Our beliefs" />
-      <div>{ aboutPage.beliefs }</div>
-      <Header text="Pastoral care" />
-      <div>{ aboutPage.pastoralCareDescription }</div>
-      <div class="pastoral-care-container">
-        { aboutPage.pastoralCare.map( (care: any) => (
-              <PastoralCareCard care={care} />
+      <section class="section-standard">
+        <Header text="Our beliefs" />
+        <p>{ aboutPage.beliefs }</p>
+      </section>
+      <section class="section-standard">
+        <Header text="Types of pastoral care" />
+        <p>{ aboutPage.pastoralCareDescription }</p>
+        <p>Consider <a href="/contact#Contact%20the%20church%20office">contacting us</a> for the following types of care:</p>
+        <div class="pastoral-care-container">
+          { aboutPage.pastoralCare.map( (care: any) => (
+                <PastoralCareCard care={care} />
+              )
             )
-          )
-        }
-
-      </div>
+          }
+        </div>
+      </section>
     </div>
   </body>
 </Layout>
 
 <style>
+  .contact-section { 
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+
   .about-page-description { 
     padding-left: 20px;
     padding-bottom: 20px;
@@ -34,9 +43,9 @@ import PastoralCareCard from "@components/PastoralCareCard.astro";
 
   .pastoral-care-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr;
-    grid-column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    margin-top: 2rem;
   }
 </style>

@@ -31,6 +31,7 @@ const { src } = Astro.props;
     overflow: hidden;
     position: relative;
     padding: 2rem 0;
+    padding-bottom: 2.25rem;
   }
 
   .image-container .img { 
@@ -47,31 +48,33 @@ const { src } = Astro.props;
     background: var(--image);
     background-size: cover;
     border-radius: 20px / 3%;
-    filter: grayscale(1);
     box-shadow: 8px 8px 4px rgba(0,0,0,0.5);
   }
 
   /* version 1 */
   .image-container span:nth-child(1) { 
     background-position: 0%;
-    border-radius: 100% 8% 5px 12px;
-  }
-
-  .image-container span:nth-child(2) { 
-    background-position: 25% -32px;
-    border-radius: 40px 15px 60px / 30px 15px 40px 25px;
+    border-radius: 100% 1% 40px 2px;
     align-self: end;
   }
 
+  .image-container span:nth-child(2) { 
+    background-position: 25% 48px;
+    border-radius: 100% 15px 60px / 30px 15px 40px 25px;
+    height: 85%;
+  }
+
   .image-container span:nth-child(3) { 
-    background-position: 50%;
+    background-position: 50% 32px;
+    /* border-radius: 20px 100% 15px 25px / 113px; */
     border-radius: 20px 60px / 40px;
+    height: 95%;
   }
 
   .image-container span:nth-child(4) { 
-    background-position: 75% -16px;
-    border-radius: 3px 100% 10px 8px;
-    align-self: center;
+    background-position: 75% 0px;
+    border-radius: 1px 100% 1px 11px;
+    align-self: end;
   }
   
   /* version 2 */
