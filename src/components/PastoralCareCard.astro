@@ -48,6 +48,12 @@ const { care } = Astro.props;
     grid-column: span 2;
   }
 
+  @media (max-width: 660px) { 
+    .card { 
+      grid-column: span 3;
+    }
+  }
+
   .description { 
     align-self: center;
     font-size: 16px;

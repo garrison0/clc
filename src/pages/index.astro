@@ -15,9 +15,13 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   <div class="wrapper">
     <main id="main">
       <!-- CLC intro section component -->
-      <div class="overlay z-10"></div>
       <section class="first-section" aria-label="Christ Church introduction">
-        <ImagePanels src="/wowboy.jpeg" />
+        <div class="full-splash-container">
+          <ImagePanels src="/wowboy.jpeg" />
+        </div>
+        <div class="mobile-splash-container">
+          <img class="standalone-splash-img" src="/clc-inside.png" />
+        </div>
         <div class="text-container">
           <div class="title-text tracking-wide text-lg font-semibold rounded-lg pt-4">
             Christ Church
@@ -29,24 +33,25 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
       </section>
       <section class="second-section" aria-label="Livestream service">
         <Header text="Livestream service" />
-        <iframe width="560" height="315" class="livestream"
-          src="https://www.youtube.com/embed/FNal5F0UDVc?si=l8nHH24OA2qY-OyN" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube.com/embed/FNal5F0UDVc?si=l8nHH24OA2qY-OyN" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
         </iframe>
+        </div>
+        
       </section>
       <section aria-label="Service time">
         <Header text="Join us" />
         <div class="service-times-container">
           { 
             Object.keys(servicesByDay).map((day: any) => 
-              <div>
+              <div class="">
                 <h4>{day}</h4>
                 {
                   servicesByDay[day].map((service: any) => (
-                      <div>
+                      <div class="service-time-container">
                         <div class="service-time">
                           {service.start}
                         </div>
@@ -88,6 +93,60 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
     --list-padding: 1.5rem;
   }
 
+  .video-player {
+    display: inline-block; /*allows the container to horizontally center*/
+    position: relative;
+    width: 100%;
+    max-height: 360px;
+    padding-bottom: 0;
+    margin-top: 1.5rem;
+  }
+  .video-player:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+  .video-player > iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      max-height: 360px;
+      top: 0;
+      left: 0;
+  }
+
+  .full-splash-container { 
+    display: block;
+  }
+
+  .mobile-splash-container { 
+    display: none;
+  }
+
+  @media (max-width: 550px) { 
+    .full-splash-container { 
+      display: none;
+    }
+
+    .mobile-splash-container { 
+      display: block;
+    }
+
+    .first-section { 
+      padding-bottom: 4rem!important;
+      padding-top: 0!important;
+    }
+
+    section { 
+      padding: 1rem!important;
+    }
+  }
+
+  .standalone-splash-img { 
+    filter: grayscale(0.05) brightness(0.95);
+    border-radius: 10px;
+  }
+
   .service-time { 
     display: inline-block;
     min-width: 5rem;
@@ -96,7 +155,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 
   .service-title { 
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 1.25rem;
   }
 
   small { 
@@ -154,6 +213,10 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
     padding-top: 1.5rem;
   }
 
+  .service-time-container { 
+    display: flex;
+  }
+
   img {
     height: auto;
     margin: var(--space-l) 0;
@@ -175,16 +238,6 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   .button-wrapper {
     margin: var(--space-xl) 0;
   }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(33,27,23,.59);
-  }
-
   #introduction { 
     display: flex;
     flex-wrap: wrap;
@@ -237,17 +290,6 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 
   #template-text a::after {
     content: " ↪";
-  }
-
-  .livestream { 
-    margin-left: auto;
-    display: block;
-    margin-top: 3rem;
-    margin-right: auto;
-  }
-
-  .livestream-header { 
-    text-align: center;
   }
 
   h2 {

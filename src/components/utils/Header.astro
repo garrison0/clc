@@ -10,15 +10,15 @@ const headerLink = "#" + encodedText;
 ---
 
 <script>
-  function copyURI(href: any) {
+  function copyURI(href: string) {
+    // evt.preventDefault();
     navigator.clipboard.writeText(href).then(() => {
-        /* clipboard successfully set */
+      /* clipboard successfully set */
     }, () => {
-        /* clipboard write failed */
-    })
-  };
-
-  const links = document.querySelectorAll('.hash-link');
+      /* clipboard write failed */
+    });
+}
+  const links = document.querySelectorAll('#hash-link');
 
   links.forEach((link) => {
     link.addEventListener('click', () => {
@@ -29,7 +29,7 @@ const headerLink = "#" + encodedText;
 </script>
 
 <div id={encodedText} class="header">
-  <a href={headerLink} class="font-light"
+  <a id="hash-link" href={headerLink} class="font-light"
     >{text} <span class="hash-link">#</span>
   </a> 
 </div>

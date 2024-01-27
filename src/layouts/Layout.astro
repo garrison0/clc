@@ -135,14 +135,15 @@ const socialImageURL = new URL(logo.src, Astro.url);
 </script>
 
 <style>
-  nav { 
-    padding: 0 4rem;
-  }
-  Footer { 
-    padding-bottom: 5rem;
-  }
-  body {
-    font-family: 'Jost';
+  @media (max-width: 768px) { 
+    nav { 
+      padding: 1rem;
+      min-width: 240px;
+      max-width: 320px;
+      margin-left: auto;
+      background-color: rgb(255 255 255);
+      border-radius: 3px;
+    }
   }
   .wrapper {
     margin: 0 auto;

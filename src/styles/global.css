@@ -66,6 +66,37 @@ body {
   color: white;
 }
 
+.sub-body { 
+  padding: 2.5rem;
+}
+
+.video-player {
+  position: relative;
+  padding-bottom: calc(100vw / 1.77);
+}
+
+
+.video-player + iframe { 
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* @media (min-width: calc( 100vh / 1.77)) {
+  .video_player iframe {
+    position: relative;
+    object-fit: cover;
+    height: 100vh;
+    width: calc(100vh * 1.77);
+  }
+
+  .video_player {
+    text-align: center;
+    padding-bottom: 0;
+  }
+} */
+
 svg { 
   display: inline;
   vertical-align: middle;
@@ -181,6 +212,20 @@ code {
 .contact-info-info-container { 
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+@media (max-width: 660px) { 
+  .sub-body { 
+    padding: 1.5rem;
+  }
+
+  .contact-info-container { 
+    text-wrap: wrap;
+  }
+
+  .contact-info { 
+    word-break: break-all;
+  }
 }
 
 /* Reduced motion preference */

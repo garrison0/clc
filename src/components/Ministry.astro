@@ -31,11 +31,11 @@ import CallButton from './CallButton.astro';
           }
         </div>
       </div>
-      <div class="img-container pl-16">
+      <div class="img-container right">
         <img src={ministry.imgSource ? ministry.imgSource : "clc-wowboy.jpeg"} class="ministry-img">
       </div>
     ) : (
-      <div class="img-container pr-16">
+      <div class="img-container left">
         <img src={ministry.imgSource ? ministry.imgSource : "clc-wowboy.jpeg"} class="ministry-img">
       </div>
       <div class="ministry-container">
@@ -77,6 +77,37 @@ import CallButton from './CallButton.astro';
   .img-container { 
     width: 50%;
     display: flex;
+  }
+
+  .img-container.left { 
+    padding-right: 4rem;
+  }
+
+  .img-container.right { 
+    padding-left: 4rem;
+  }
+
+  @media (max-width: 660px) { 
+    .ministry-container { 
+      width: 100%;
+    }
+
+    .img-container { 
+      width: 100%;
+      padding-top: 2rem;
+    }
+
+    .container { 
+      display: block;
+    }
+
+    .img-container.left { 
+      padding-right: 0;
+    }
+
+    .img-container.right { 
+      padding-left: 0;
+    }
   }
   
   .calls-to-action-container { 
