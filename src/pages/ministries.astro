@@ -16,6 +16,9 @@ import Ministry from "@components/Ministry.astro";
   if(screenWidth <= 660){ 
     let elem = document.querySelector('.full-page-ministry');
     elem.remove();
+  } else {
+    let elem = document.querySelector('.mobile-ministry');
+    elem.remove();
   }
 </script>
 
