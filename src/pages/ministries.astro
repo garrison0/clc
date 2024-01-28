@@ -2,42 +2,16 @@
 import Layout from "@layouts/Layout.astro";
 import ministryPage from '../../site/content/ministries.yml';
 import Ministry from "@components/Ministry.astro";
-
-
 ---
-
-<script type="module">
-  const screenWidth = window.innerWidth;
-
-  // TODO: hacky but not sure how to get around it...
-  // can't just 'display: none' at breakpoint b/c that doesn't work with anchor links
-  // also doesn't run continuously so if screen is re-sized it'll have the wrong html
-  // good enough for now...
-  if(screenWidth <= 660){ 
-    let elem = document.querySelector('.full-page-ministry');
-    elem.remove();
-  } else {
-    let elem = document.querySelector('.mobile-ministry');
-    elem.remove();
-  }
-</script>
 
 <Layout title="Ministries">
   <body>
     <div class="sub-body">
       <h1>Ministries</h1>
-      <div class="full-page-ministry">
+      <div>
         {
           ministryPage.ministries.map( (ministry: any, index: number) => (
               <Ministry ministry={ministry} imageOnRight={index % 2 == 0} />
-            )
-          )
-        }
-      </div>
-      <div class="mobile-ministry">
-        {
-          ministryPage.ministries.map( (ministry: any, index: number) => (
-              <Ministry ministry={ministry} imageOnRight={true} />
             )
           )
         }
