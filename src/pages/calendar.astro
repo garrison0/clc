@@ -6,9 +6,35 @@ import Layout from "@layouts/Layout.astro";
   <body>
     <div class="sub-body">
       <h1>Calendar</h1>
-      <p>
-        Calendar component goes here...
-      </p>
+      <div class="calendar-container">
+        <div class="desk-content">
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&src=Y2hyaXN0bHV0aGVyYW53b29kc2lkZUBnbWFpbC5jb20&color=%23039BE5" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="phone-content">
+          <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&src=Y2hyaXN0bHV0aGVyYW53b29kc2lkZUBnbWFpbC5jb20&color=%23039BE5" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
     </div>
   </body>
 </Layout>
+
+<style>
+  .calendar-container { 
+    margin-top: 1rem;
+  }
+
+  .calendar-container iframe {
+    border-radius: 3px;
+    box-shadow: 8px 8px 4px rgba(0,0,0,0.5);
+  }
+
+  @media all and (min-width: 768px) {
+    .desk-content {display:block;}
+    .phone-content {display:none;}
+  }
+
+  @media all and (max-width: 767px) {
+    .desk-content {display:none;}
+    .phone-content {display:block;}
+  }
+</style>
