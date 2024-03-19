@@ -14,14 +14,16 @@ ministries:
         description: ""
         call: Contact our pastor
   - title: English as a Second Language Classes
-    description: English as a Second Language classes are a great way to learn
+    description: ESL (English as a Second Language) classes are a great way to learn
       English in a welcoming and friendly environment.
     callsToAction:
-      - header: Join us for classes.
-        description: Please contact the church office to sign up or for more information.
+      - header: To join us for classes, contact the church office to sign up or get more
+          information.
+        description: ""
         call: Contact the church office
-      - header: Want to help volunteer or teach English classes?
-        description: Sign up to help out once a month, once a week, or as needed.
+      - header: To volunteer and teach at ESL classes, contact the church office to help
+          out once a month, once a week or as needed.
+        description: ""
         call: Contact the church office
   - title: Women of Faith
     description: >-
@@ -57,7 +59,7 @@ ministries:
         description: ""
         call: Contact the church office
   - title: Music
-    description: At Christ Church we welcome you to share your musical gifts.
+    description: At Christ Church, we welcome you to share your musical gifts.
       Whether it's singing in the choir, playing a musical instrument, writing
       songs, composing music or teaching music to our children and youth, we
       invite you to make a joyful noise!
