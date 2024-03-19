@@ -47,7 +47,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
         <div class="service-times-container">
           { 
             Object.keys(servicesByDay).map((day: any) => 
-              <div class="">
+              <div class="service-day-container">
                 <h4>{day}</h4>
                 {
                   servicesByDay[day].map((service: any) => (
@@ -145,6 +145,10 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   .standalone-splash-img { 
     filter: grayscale(0.05) brightness(0.95);
     border-radius: 10px;
+  }
+
+  .service-day-container:not(:first-child) { 
+    margin-top: 1.5rem;
   }
 
   .service-time { 
