@@ -71,5 +71,5 @@ ministries:
     description: description of our group, intent...
     callsToAction:
       - call: Contact our pastor
-        description: Contact Pastor Alex for more information.
-        header: Join us!
+        description: ""
+        header: To join, contact Pastor Alex for more information.
