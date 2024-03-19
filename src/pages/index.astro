@@ -26,6 +26,9 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
           <div class="title-text tracking-wide text-lg font-semibold rounded-lg pt-4">
             Christ Church
           </div>
+          <div class="pt-4 mission-statement">
+            { homepage.missionStatement }
+          </div>
           <div class="pt-4 subtitle">
             A congregation of the <ExternalLink name="Lutheran Church--Missouri Synod" href="https://www.lcms.org/" />
           </div>
@@ -169,6 +172,10 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
 
   .subtitle { 
     font-size: 19px;
+  }
+
+  .mission-statement { 
+    font-size: 25px;
   }
 
   .announcements-list { 
@@ -336,11 +343,11 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
   }
 
   .first-section { 
-    padding-top: 5.75rem;
+    padding-top: 4rem;
   }
 
   .second-section {
-    padding-top: 10rem;
+    padding-top: 8rem;
   }
 
   footer {

@@ -23,6 +23,9 @@ collections:
         file: 'site/content/homepage.yml'
         description: 'Homepage data'
         fields:
+          label: 'Mission statement',
+            name: 'missionStatement',
+            widget: 'text'
           - label: 'Service times'
             name: 'serviceTimes'
             widget: 'list'
