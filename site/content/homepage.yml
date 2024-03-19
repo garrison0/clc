@@ -1,4 +1,7 @@
 serviceTimes:
+  - title: Patristics Book Study
+    day: Saturday
+    start: 11:30am
   - day: Sunday
     start: 10:00am
     title: Bible Study
@@ -11,7 +14,19 @@ serviceTimes:
 announcements:
   - datetime: 2024-01-25T03:41:55.649Z
     title: Another lecture!
-    description: Looamsdoams doas daksj dlaksjnd;akefn sdfsd
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
   - datetime: 2024-01-13T19:55:49.028Z
     title: Guest lecturer visiting Woodside!
-    description: Next Tuesday, she'll be coming around the mountain (when she comes).
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
