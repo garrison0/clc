@@ -18,22 +18,22 @@ staffInformation:
     email: revalexchristwoodside@gmail.com
     name: Alex Marque
     title: Pastor
-    headshot: /assets/uploads/clc-pastor-alex.jpg
+    headshot: /uploads/clc-pastor-alex.jpg
   - name: Marlene Beckett
     title: Administrative Assistant
     email: clcny@aol.com
     phone: (718) 639-3945
     description: ""
-    headshot: /assets/uploads/clc-marlene.jpg
+    headshot: /uploads/clc-marlene.jpg
   - title: Director of Music
     name: Shawn Beckett
     email: clcny@aol.com
-    headshot: /assets/uploads/clc-shaun.jpg
+    headshot: /uploads/clc-shaun.jpg
   - title: Church Book Keeper
     name: Claudio Bassi
     email: clcny@aol.com
-    headshot: /assets/uploads/clc-fella.jpg
+    headshot: /uploads/clc-fella.jpg
   - title: Congregational President
     name: John Moran
     email: clcny@aol.com
-    headshot: /assets/uploads/clc-john-moran.jpg
+    headshot: /uploads/clc-john-moran.jpg
