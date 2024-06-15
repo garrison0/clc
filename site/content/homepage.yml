@@ -1,8 +1,6 @@
-missionStatement: Celebrating and sharing God's gospel for the world throughout the world's borough
+missionStatement: Celebrating and sharing God's gospel for the world throughout
+  the world's borough
 serviceTimes:
-  - title: Patristics Book Study
-    day: Saturday
-    start: 11:30am
   - day: Sunday
     start: 10:00am
     title: Bible Study
