@@ -68,7 +68,9 @@ ministries:
         description: ""
         call: Contact the church office
   - title: Patristics book club
-    description: description of our group, intent...
+    description: "We're studying important works written by the church fathers --
+      first, \"On the Incarnation\" by St. Athanasius, and now, \"Against
+      Heresies\" by Irenaeus of Lyons. "
     callsToAction:
       - call: Contact our pastor
         description: ""
