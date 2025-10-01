@@ -8,7 +8,7 @@ ministries:
       experienced as we grow closer to Him through His word and His Spirit. 
 
 
-      Dinner and Discipleship is a weekly gathering for the young adults of Christ Church to share a meal and to learn more about living with Jesus every day of our lives. If you are in your 20's or 30's, and are eager to explore your discipleship with Jesus, this is the place for you! 
+      Dinner and Discipleship is a bimonthly gathering for the young adults of Christ Church to share a meal and to learn more about living with Jesus every day of our lives. If you are in your 20's or 30's, and are eager to explore your discipleship with Jesus, this is the place for you! 
     callsToAction:
       - header: To join, contact Pastor Alex for place and time.
         description: ""
@@ -67,11 +67,17 @@ ministries:
       - header: Interested in joining choir or in teaching opportunities?
         description: ""
         call: Contact the church office
-  - title: Patristics book club
-    description: "We're studying important works written by the church fathers --
-      first, \"On the Incarnation\" by St. Athanasius, and now, \"Against
-      Heresies\" by Irenaeus of Lyons. "
+  - title: "Contemplate: Evening Prayer"
+    description: In this intimate service on the 3rd Wednesday of each month, we
+      take time to intentionally slow down and abide in the presence of Christ
+      through prayer. In this special evening prayer service, we highlight
+      stillness in prayer, music, and mediation on Holy Scripture.  In addition,
+      we are excited to also offer a zoom option for those who are unable to
+      join us in person at church. Join us on the third Wednesday of each month
+      at 7:30pm for this special time to join our minds and hearts together with
+      God through the gift of prayer!
     callsToAction:
       - call: Contact our pastor
         description: ""
         header: To join, contact Pastor Alex for more information.
+    image: /public/uploads/daab64d4-6854-47fe-b53e-255ae45d97c1.jpeg
