@@ -7,6 +7,9 @@ serviceTimes:
   - day: Sunday
     start: 11:00am
     title: Divine Service with Holy Communion
+  - title: ESL
+    day: Sunday
+    start: 2:00pm
   - day: Sunday
     start: 5:00pm
     title: United Bengali Lutheran Church Worship Service in Bangla
