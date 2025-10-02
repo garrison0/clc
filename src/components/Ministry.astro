@@ -32,11 +32,11 @@ import CallButton from './CallButton.astro';
         </div>
       </div>
       <div class="img-container right">
-        <img src={ministry.image ? ministry.image : "clc-wowboy.jpeg"} class="ministry-img">
+        <img src={ministry.image ? ministry.image.replace('public/', "") : "clc-wowboy.jpeg"} class="ministry-img">
       </div>
     ) : (
       <div class="img-container left">
-        <img src={ministry.image ? ministry.image : "clc-wowboy.jpeg"} class="ministry-img">
+        <img src={ministry.image ? ministry.image.replace('public/', "") : "clc-wowboy.jpeg"} class="ministry-img">
       </div>
       <div class="ministry-container">
         <Header text={ministry.title} />
