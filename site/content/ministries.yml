@@ -46,6 +46,7 @@ ministries:
           out once a month, once a week or as needed.
         description: ""
         call: Contact the church office
+    image: /public/uploads/img_9861.jpeg
   - title: Women of Faith
     description: >-
       Each month, the women of Christ Church gather together for food,
@@ -90,3 +91,4 @@ ministries:
       - header: Interested in joining a servant team or becoming involved?
         description: ""
         call: Contact the church office
+    image: /public/uploads/img_9857.jpeg
