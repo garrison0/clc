@@ -10,7 +10,7 @@ site_url: https://melodic-brioche-682b75.netlify.app/
 
 publish_mode: editorial_workflow
 media_folder: "public/uploads"
-public_folder: "/uploads"
+public_folder: ""
 
 collections:
   - name: "settings"
