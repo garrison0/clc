@@ -8,6 +8,7 @@ import Footer from '@components/Footer.astro';
 import SkipLink from "@utils/SkipLink.astro";
 import BackToTop from "@utils/BackToTop.astro";
 import logo from "@images/logo.png";
+import settings from '../data/settings.json';
 
 export interface Props {
   title: string;
@@ -91,7 +92,7 @@ const socialImageURL = new URL(logo.src, Astro.url);
             </div>
           </div>
           <a class="navbar-link px-4 py-2 mt-2 font-medium bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/contact">Contact</a>
-          <a class="navbar-link px-4 py-2 mt-2 font-medium bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline outline outline-slate-400/50" href="https://secure.usaepay.com/pay/3nkt6jb4631zzwztb/QgaGxTeZ" target="_blank" rel="noopener noreferrer">Give</a>    
+          <a class="navbar-link px-4 py-2 mt-2 font-medium bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline outline outline-slate-400/50" href={settings.givingLink} target="_blank" rel="noopener noreferrer">Give</a>    
         </nav>
       </div>
     </div>
