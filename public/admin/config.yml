@@ -12,6 +12,16 @@ publish_mode: editorial_workflow
 media_folder: "public/uploads"
 
 collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "src/data/settings.json" # Or .yml, .md, etc.
+        label: "Global Settings"
+        name: "global_settings"
+        fields:
+          - label: "Giving link"
+            name: "givingLink"
+            widget: "string"
   - name: 'pages'
     label: 'Pages'
     editor:

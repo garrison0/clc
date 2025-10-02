@@ -20,24 +20,24 @@ import CallButton from './CallButton.astro';
         </div> 
         <div class="calls-to-action-container">
           {
-            ministry.callsToAction.map( ( call:any ) => (
+            ministry.callsToAction ? ministry.callsToAction.map( ( call:any ) => (
               call.description ?
               <h4 class="call-header">{call.header}</h4>
               <p class="call-description">{call.description}</p>
               <CallButton call={call.call} />
               : <h4 class="call-header">{call.header}</h4>
               <CallButton call={call.call} />
-            ))
+            )) : <div></div>
           }
         </div>
       </div>
-      // <div class="img-container right">
-      //   <img src={ministry.imgSource ? ministry.imgSource : "clc-wowboy.jpeg"} class="ministry-img">
-      // </div>
+      <div class="img-container right">
+        <img src={ministry.image ? ministry.image : "clc-wowboy.jpeg"} class="ministry-img">
+      </div>
     ) : (
-      // <div class="img-container left">
-      //   <img src={ministry.imgSource ? ministry.imgSource : "clc-wowboy.jpeg"} class="ministry-img">
-      // </div>
+      <div class="img-container left">
+        <img src={ministry.image ? ministry.image : "clc-wowboy.jpeg"} class="ministry-img">
+      </div>
       <div class="ministry-container">
         <Header text={ministry.title} />
         <div class="ministry-description">
@@ -45,14 +45,14 @@ import CallButton from './CallButton.astro';
         </div> 
         <div class="calls-to-action-container">
           {
-            ministry.callsToAction.map( ( call:any ) => (
+            ministry.callsToAction ? ministry.callsToAction.map( ( call:any ) => (
               call.description ?
               <h4 class="call-header">{call.header}</h4>
               <p class="call-description">{call.description}</p>
               <CallButton call={call.call} />
               : <h4 class="call-header">{call.header}</h4>
               <CallButton call={call.call} />
-            ))
+            )) : <div></div>
           }
         </div>
       </div> 
@@ -77,7 +77,7 @@ import CallButton from './CallButton.astro';
   }
 
   .img-container { 
-    width: 50%;
+    max-width: 45%;
     display: flex;
   }
 
@@ -110,6 +110,10 @@ import CallButton from './CallButton.astro';
 
     .img-container.right { 
       padding-left: 0;
+    }
+
+    .img-container { 
+      max-width: 100%;
     }
   }
   
