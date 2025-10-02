@@ -31,10 +31,7 @@ ministries:
       join us in person at church. Join us on the third Wednesday of each month
       at 7:30pm for this special time to join our minds and hearts together with
       God through the gift of prayer!
-    callsToAction:
-      - call: Contact our pastor
-        description: ""
-        header: To join, contact Pastor Alex for more information.
+    callsToAction: []
     image: /public/uploads/daab64d4-6854-47fe-b53e-255ae45d97c1.jpeg
   - title: English as a Second Language Classes
     description: ESL (English as a Second Language) classes are a great way to learn
