@@ -10,6 +10,9 @@ serviceTimes:
   - day: Sunday
     start: 5:00pm
     title: United Bengali Lutheran Church Worship Service in Bangla
+  - title: ESL
+    day: Sunday
+    start: 2:00pm
 announcements:
   - datetime: 2024-01-25T03:41:55.649Z
     title: Another lecture!
