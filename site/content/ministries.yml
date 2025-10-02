@@ -42,6 +42,38 @@ ministries:
           When  | 2nd Saturday of Every Month
           Time    | 10 - 12 noon
           Where | Family Life Center
+  - title: Zoom Bible Study
+    description: "In addition to our regular weekly Sunday School classes before
+      worship each Sunday, Pastor Alex teaches two 10-week bible studies each
+      year on zoom, in the fall and in the spring respectively. In these 10-week
+      terms, there is the opportunity for in depth study of whole books of the
+      bible and plenty of time for discussion. This fall, on Thursday evenings
+      at 7:30pm, beginning October 2nd we are studying St. Paul's letter to the
+      Ephesians. "
+  - title: "Contemplate: Evening Prayer"
+    description: In this intimate service on the 3rd Wednesday of each month, we
+      take time to intentionally slow down and abide in the presence of Christ
+      through prayer. In this special evening prayer service, we highlight
+      stillness in prayer, music, and mediation on Holy Scripture.  In addition,
+      we are excited to also offer a zoom option for those who are unable to
+      join us in person at church. Join us on the third Wednesday of each month
+      at 7:30pm for this special time to join our minds and hearts together with
+      God through the gift of prayer!
+    callsToAction:
+      - call: Contact our pastor
+        description: ""
+        header: To join, contact Pastor Alex for more information.
+    image: /public/uploads/daab64d4-6854-47fe-b53e-255ae45d97c1.jpeg
+  - title: Music
+    description: At Christ Church, we welcome you to share your musical gifts.
+      Whether it's singing in the choir, playing a musical instrument, writing
+      songs, composing music or teaching music to our children and youth, we
+      invite you to make a joyful noise!
+    callsToAction:
+      - header: Interested in joining choir or in teaching opportunities?
+        description: ""
+        call: Contact the church office
+    image: /public/uploads/img_9845.jpeg
   - description: >-
       Our concern for our neighbors doesn't end at the borders of our
       neighborhood -
@@ -59,27 +91,3 @@ ministries:
       - header: Interested in joining a servant team or becoming involved?
         description: ""
         call: Contact the church office
-  - title: Music
-    description: At Christ Church, we welcome you to share your musical gifts.
-      Whether it's singing in the choir, playing a musical instrument, writing
-      songs, composing music or teaching music to our children and youth, we
-      invite you to make a joyful noise!
-    callsToAction:
-      - header: Interested in joining choir or in teaching opportunities?
-        description: ""
-        call: Contact the church office
-    image: /public/uploads/img_9845.jpeg
-  - title: "Contemplate: Evening Prayer"
-    description: In this intimate service on the 3rd Wednesday of each month, we
-      take time to intentionally slow down and abide in the presence of Christ
-      through prayer. In this special evening prayer service, we highlight
-      stillness in prayer, music, and mediation on Holy Scripture.  In addition,
-      we are excited to also offer a zoom option for those who are unable to
-      join us in person at church. Join us on the third Wednesday of each month
-      at 7:30pm for this special time to join our minds and hearts together with
-      God through the gift of prayer!
-    callsToAction:
-      - call: Contact our pastor
-        description: ""
-        header: To join, contact Pastor Alex for more information.
-    image: /public/uploads/daab64d4-6854-47fe-b53e-255ae45d97c1.jpeg
