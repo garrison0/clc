@@ -9,8 +9,7 @@ backend:
 site_url: https://melodic-brioche-682b75.netlify.app/
 
 publish_mode: editorial_workflow
-media_folder: "/uploads/"
-public_folder: ""
+media_folder: "public/uploads"
 
 collections:
   - name: "settings"
