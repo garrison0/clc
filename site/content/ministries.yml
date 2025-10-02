@@ -13,6 +13,7 @@ ministries:
       - header: To join, contact Pastor Alex for place and time.
         description: ""
         call: Contact our pastor
+    image: /public/uploads/img_9849.jpeg
   - title: English as a Second Language Classes
     description: ESL (English as a Second Language) classes are a great way to learn
       English in a welcoming and friendly environment.
