@@ -20,7 +20,7 @@ const servicesByDay = _.groupBy(homepage.serviceTimes, ({ day }) => day);
           <ImagePanels src="/wowboy.jpeg" />
         </div>
         <div class="mobile-splash-container">
-          <img class="standalone-splash-img" src={homepage.homepagePhotoMobile} />
+          <img class="standalone-splash-img" src={homepage.homepagePhotoMobile ? homepage.homepagePhotoMobile.replace('public/', "") : "clc-inside.png"} />
         </div>
         <div class="text-container">
           <div class="title-text tracking-wide text-lg font-semibold rounded-lg pt-4">
