@@ -36,6 +36,11 @@ collections:
           - label: 'Mission statement'
             name: 'missionStatement'
             widget: 'text'
+          - label: "Homepage photo - mobile"
+            name: "homepagePhotoMobile"
+            widget: "image"
+            choose_url: true
+            required: true
           - label: 'Service times'
             name: 'serviceTimes'
             widget: 'list'
