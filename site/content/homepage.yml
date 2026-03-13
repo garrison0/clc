@@ -10,12 +10,12 @@ serviceTimes:
   - title: ESL
     day: Sunday
     start: 2:00pm
-  - day: Sunday
-    start: 5:00pm
-    title: United Bengali Lutheran Church Worship Service in Bangla
   - title: Spanish Service of Prayer and Preaching (2nd and 4th Sunday of the month)
     day: Sunday
     start: 3:30pm-4:15pm
+  - day: Sunday
+    start: 5:00pm
+    title: United Bengali Lutheran Church Worship Service in Bangla
 announcements:
   - datetime: 2024-01-25T03:41:55.649Z
     title: Another lecture!
