@@ -17,21 +17,11 @@ serviceTimes:
     start: 5:00pm
     title: United Bengali Lutheran Church Worship Service in Bangla
 announcements:
-  - datetime: 2024-01-25T03:41:55.649Z
-    title: Another lecture!
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-  - datetime: 2024-01-13T19:55:49.028Z
-    title: Guest lecturer visiting Woodside!
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+  - title: Upcoming Holy Week Services
+    description: "Join us for Holy Week! Sunday March 29th at 11am kicks off our
+      celebration of Holy Week with Palm/Passion Sunday. Thursday April 2nd at
+      7:30pm- Maundy Thursday Divine Service. Friday April 3rd at 7:30pm- Good
+      Friday Divine Service. Saturday April 4th at 8:00pm- Easter Vigil Divine
+      Service. Sunday April 5th at 11am- Easter Celebration of the Resurrection
+      of our Lord! "
+    datetime: 2026-03-13T12:22:00.000-04:00
