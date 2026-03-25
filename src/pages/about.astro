@@ -16,14 +16,16 @@ import PastoralCareCard from "@components/PastoralCareCard.astro";
       <section class="section-standard">
         <Header text="Types of pastoral care" />
         <p>{ aboutPage.pastoralCareDescription }</p>
-        <p>Consider <a href="/contact#Contact%20the%20church%20office">contacting us</a> for the following types of care:</p>
-        <div class="pastoral-care-container">
-          { aboutPage.pastoralCare.map( (care: any) => (
-                <PastoralCareCard care={care} />
+        {aboutPage.pastoralCare.length ? (
+          <p>Consider <a href="/contact#Contact%20the%20church%20office">contacting us</a> for the following types of care:</p>
+          <div class="pastoral-care-container">
+            { aboutPage.pastoralCare.map( (care: any) => (
+                  <PastoralCareCard care={care} />
+                )
               )
-            )
-          }
-        </div>
+            }
+          </div>
+        ) : <>}
       </section>
     </div>
   </body>
