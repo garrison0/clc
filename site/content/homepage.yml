@@ -19,16 +19,15 @@ serviceTimes:
     start: 5:00pm
     title: United Bengali Lutheran Church Worship Service in Bangla
 announcements:
-  - title: Eastertide Sermons
-    description: "Right now, during the Sundays of the Easter Season, pastor Alex is
-      preaching through 1st Peter as the series of Epistle readings found in the
-      Lectionary cycle for this year. Join us as we hear about how the
-      Resurrection of Jesus gives us a new birth into a living hope and how that
-      hope helps us right now to live out our holy calling as God's people
-      through Jesus! "
-    datetime: 2026-04-28T12:22:00.000-04:00
+  - title: Ordinary TIme
+    description: 'We are now in the Church Liturgical Season of "Ordinary Time" or
+      "The Sundays after Pentecost." In the season of the Church year, the color
+      green predominates. We are reminded by the color green of growth. We
+      remember in this season as we focus on the ministry of Jesus, God is
+      growing and maturing His Church through the Gospel and the Holy Spirit. '
+    datetime: 2026-07-01T09:22:00.000-04:00
   - title: Zoom Bible Study on book of Daniel
-    datetime: 2026-04-16T11:14:00.000-04:00
-    description: We have begun our Thursday night zoom bible study on the book of
-      Daniel! This is a 12-week study. All are welcome to Join at any time.
-      Contact Pastor Alex to get the zoom links!
+    datetime: 2026-07-01T09:27:00.000-04:00
+    description: "During these summer months we are now on a summer break from our
+      ESL classes and our Spanish prayer and preaching service. The activities
+      will resume after Labor Day. "
