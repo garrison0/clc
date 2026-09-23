@@ -8,12 +8,9 @@ serviceTimes:
   - day: Sunday
     start: 11:00am
     title: Divine Service with Holy Communion
-  - title: ESL (on summer break until after Labor Day)
+  - title: "ESL "
     day: Sunday
     start: 2:00pm
-  - title: Spanish Service of Prayer and Preaching (on summer break)
-    day: Sunday
-    start: 3:30pm - 4:15pm
   - day: Sunday
     start: 5:00pm
     title: United Bengali Lutheran Church Worship Service in Bangla
@@ -25,8 +22,13 @@ announcements:
       remember in this season as we focus on the ministry of Jesus, God is
       growing and maturing His Church through the Gospel and the Holy Spirit. '
     datetime: 2026-07-01T09:22:00.000-04:00
-  - title: Summer Hiatus from ESL classes and Spanish service
+  - title: Free English classes are Back! Join us at 2:00pm on Sundays!
     datetime: 2026-07-01T09:27:00.000-04:00
-    description: "During these summer months we are now on a summer break from our
-      ESL classes and our Spanish prayer and preaching service. The activities
-      will resume after Labor Day. "
+    description: "English classes are back in session!  "
+  - title: 12 week Bible study on Revelation (on zoom) starts OCT 1st.
+    description: Starting on Thursday October 1st, Pastor Alex will be leading a 12
+      week bible study series on the first half of the book of Revelation (We
+      will finish the book in the Spring!). Join us on Zoom on Thursdays at 7pm
+      as we study this powerful but often confusing and settling book of the
+      bible together!
+    datetime: 2026-09-23T08:57:00.000-04:00
